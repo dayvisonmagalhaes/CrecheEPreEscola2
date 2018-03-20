@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Creche e Pre-Escola</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="action_settings">Settings</string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+
+    <string name="diario_titulo_presenca">Presente?</string>
+    <string name="lista_alunos_titulo">Lista de alunos</string>
+    <string name="diario_titulo_inicial">Diário do aluno:</string>
+    <string name="diario_titulo_refeições">Refeições</string>
+    <string name="diario_titulo_mamadeira">Mamadeira?</string>
+    <string name="diario_lanche_manha">Lanche da Manhã?</string>
+    <string name="diario_almoco">Almoço?</string>
+    <string name="diario_lanche_da_tarde">Lanche da tarde?</string>
+    <string name="diario_jantar">Jantar?</string>
+    <string name="diario_titulo_remedios">Remédios?</string>
+    <string name="diario_titulo_participacao">Participou das atividades?</string>
+    <string name="diario_titulo_sono">Sono:</string>
+    <string name="diario_sono_tempo">Digite aqui o tempo?</string>
+    <string name="diario_titulo_evacuacao">Evacuação:</string>
+    <string name="diario_evacuacao_intensidade">Intensidade?</string>
+    <string name="diario_titulo_resumo_dia">Resumo do dia?</string>
+    <string name="diario_titulo_obs_remedios">Digite aqui as observações</string>
+    <string name="diario_resumoDia_info">Digite aqui o resumo do dia</string>
+</resources>
