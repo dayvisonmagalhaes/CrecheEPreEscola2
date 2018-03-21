@@ -1,0 +1,547 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="carros.com.br.crecheepreescola.fragment.DiarioFragment2">
+
+    <TextView
+        android:id="@+id/tituloInicial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        android:text="@string/diario_titulo_inicial"
+        android:textAlignment="center"
+        android:textSize="18dp" />
+    <!--
+        <ImageView
+            android:id="@+id/foto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+
+            android:src="@drawable/foto_crianca" />
+    -->
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="0dp"
+    android:orientation="vertical"
+    android:layout_weight="8">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/presenca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="20dp"
+
+                android:text="@string/diario_titulo_presenca" />
+
+            <RadioGroup
+                android:id="@+id/groupPresenca"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="false"
+                    android:text="Sim" />
+
+                <RadioButton
+                    android:id="@+id/radioNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="true"
+                    android:text="Não" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/mamadeira"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:text="@string/diario_titulo_mamadeira" />
+
+            <RadioGroup
+                android:id="@+id/groupMamadeira"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioMamadeiraNaoAceitou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="false"
+                    android:text="Não aceitou" />
+
+                <RadioButton
+                    android:id="@+id/radioMamadeiraMenosMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Menos da metade" />
+
+                <RadioButton
+                    android:id="@+id/radioMamadeiraMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Metade" />
+
+                <RadioButton
+                    android:id="@+id/radioMamadeiraMaisDaMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Mais da metade" />
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lancheManha"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/groupMamadeira"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:text="@string/diario_lanche_manha" />
+
+            <RadioGroup
+                android:id="@+id/groupLancheManha"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioLancheNaoAceitou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="false"
+                    android:text="Não aceitou" />
+
+                <RadioButton
+                    android:id="@+id/radioLancheMenosMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Menos da metade" />
+
+                <RadioButton
+                    android:id="@+id/radioLancheMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Metade" />
+
+                <RadioButton
+                    android:id="@+id/radioLancheMaisDaMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Mais da metade" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/almoco"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:text="@string/diario_almoco" />
+
+            <RadioGroup
+                android:id="@+id/groupAlmoco"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioAlmocoNaoAceitou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="false"
+                    android:text="Não aceitou" />
+
+                <RadioButton
+                    android:id="@+id/radioAlmocoMenosMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Menos da metade" />
+
+                <RadioButton
+                    android:id="@+id/radioAlmocoMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Metade" />
+
+                <RadioButton
+                    android:id="@+id/radioAlmocoMaisDaMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Mais da metade" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/lancheTarde"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:text="@string/diario_lanche_da_tarde" />
+
+            <RadioGroup
+                android:id="@+id/groupLancheTarde"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioLancheTardeNaoAceitou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="false"
+                    android:text="Não aceitou" />
+
+                <RadioButton
+                    android:id="@+id/radioLancheTardeMenosMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Menos da metade" />
+
+                <RadioButton
+                    android:id="@+id/radioLancheTardeMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Metade" />
+
+                <RadioButton
+                    android:id="@+id/radioLancheTardeMaisDaMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Mais da metade" />
+
+            </RadioGroup>
+
+
+            <TextView
+                android:id="@+id/jantar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:text="@string/diario_jantar" />
+
+            <RadioGroup
+                android:id="@+id/groupJantar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioJantarNaoAceitou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="false"
+                    android:text="Não aceitou" />
+
+                <RadioButton
+                    android:id="@+id/radioJantarMenosMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Menos da metade" />
+
+                <RadioButton
+                    android:id="@+id/radioJantarMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Metade" />
+
+                <RadioButton
+                    android:id="@+id/radioJantarMaisDaMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Mais da metade" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/remedio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/holo_green_light"
+                android:text="@string/diario_titulo_remedios" />
+
+            <RadioGroup
+                android:id="@+id/groupRemedio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioRemedioSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="false"
+                    android:text="Sim" />
+
+                <RadioButton
+                    android:id="@+id/radioRemedioNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="true"
+                    android:text="Não" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/obsRemedio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/diario_titulo_obs_remedios" />
+
+            <TextView
+                android:id="@+id/participacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/remedioObs"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:text="@string/diario_titulo_participacao" />
+
+            <RadioGroup
+                android:id="@+id/groupParticipacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioParticNaoAceitou"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="false"
+                    android:text="Não participou" />
+
+                <RadioButton
+                    android:id="@+id/radioParticMenosMetade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Pouco" />
+
+                <RadioButton
+                    android:id="@+id/radioParticNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Normal" />
+
+                <RadioButton
+                    android:id="@+id/radioParticExcelente"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Excelente" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/sono"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/groupParticipacao"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="20dp"
+                android:background="@android:color/holo_green_light"
+                android:text="@string/diario_titulo_sono" />
+
+            <RadioGroup
+                android:id="@+id/groupSono"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radioSonoSim"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="false"
+                    android:text="Sim" />
+
+                <RadioButton
+                    android:id="@+id/radioSonoNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="true"
+                    android:text="Não" />
+            </RadioGroup>
+
+            <EditText
+                android:id="@+id/sonoTempo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/diario_sono_tempo" />
+
+            <TextView
+                android:id="@+id/evacuacao"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sonoTempo"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:text="@string/diario_titulo_evacuacao" />
+
+            <RadioGroup
+                android:id="@+id/groupEvacuacao"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RadioButton
+                    android:id="@+id/radioEvacNao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:checked="false"
+                    android:text="Não Evacuou" />
+
+                <RadioButton
+                    android:id="@+id/radioEvacPouco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Pouco" />
+
+                <RadioButton
+                    android:id="@+id/radioEvacNormal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Normal" />
+
+                <RadioButton
+                    android:id="@+id/radioEvacMuito"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:checked="false"
+                    android:text="Muito" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/resumoDia"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/holo_green_light"
+                android:text="@string/diario_titulo_resumo_dia" />
+
+
+            <EditText
+                android:id="@+id/resumoDiaET"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/diario_resumoDia_info" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="3"
+        android:background="@color/colorBackgroundButton"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <Button
+                android:id="@+id/salvarDiario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/colorPrimary"
+                android:text="Salvar"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="5">
+
+            <Button
+                android:id="@+id/editarDiario"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@android:color/darker_gray"
+                android:text="Editar"
+                android:textColor="@android:color/white" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

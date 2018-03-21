@@ -10,6 +10,7 @@ import carros.com.br.crecheepreescola.R;
 import carros.com.br.crecheepreescola.adapter.SectionsPageAdapter_Diario_Msg;
 import carros.com.br.crecheepreescola.adapter.SectionsPageAdapter_Tur_Cal;
 import carros.com.br.crecheepreescola.fragment.DiarioFragment;
+import carros.com.br.crecheepreescola.fragment.DiarioFragment2;
 import carros.com.br.crecheepreescola.fragment.MsgFragment;
 import carros.com.br.crecheepreescola.fragment.PCalendarioFragment;
 import carros.com.br.crecheepreescola.fragment.PTurmasFragment;
@@ -38,7 +39,7 @@ public class Diario_Msg_Activity extends AppCompatActivity {
     private void setupViewPager (ViewPager viewPager){
 
         SectionsPageAdapter_Diario_Msg adapter = new SectionsPageAdapter_Diario_Msg(getSupportFragmentManager());
-        adapter.addFragment(new DiarioFragment(), "DIÁRIO");
+        adapter.addFragment(new DiarioFragment2(), "DIÁRIO");
         adapter.addFragment(new MsgFragment(), "MENSAGEM");
         viewPager.setAdapter(adapter);
     }

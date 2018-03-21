@@ -1,8 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="0dp"
-    android:orientation="vertical"
-    android:layout_weight="6">
+
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
@@ -513,37 +509,7 @@
     </RelativeLayout>
 </ScrollView>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="20dp"
-        android:layout_weight="7"
-        android:orientation="horizontal"
-        android:visibility="visible">
 
 
-        <Button
-            android:id="@+id/salvarDiario"
-
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:layout_marginRight="10dp"
-            android:background="@color/colorPrimary"
-            android:text="Salvar"
-            android:textColor="@android:color/white" />
-
-        <Button
-            android:id="@+id/editarDiario"
-            style="?android:attr/buttonBarButtonStyle"
-            android:layout_width="180dp"
-            android:layout_height="wrap_content"
-            android:layout_marginLeft="16dp"
-            android:background="@android:color/darker_gray"
-            android:text="Editar"
-            android:textColor="@android:color/white" />
-    </LinearLayout>
-</LinearLayout>
 
 
