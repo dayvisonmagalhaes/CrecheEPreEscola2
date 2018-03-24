@@ -8,11 +8,8 @@ import android.util.Log;
 
 import carros.com.br.crecheepreescola.R;
 import carros.com.br.crecheepreescola.adapter.SectionsPageAdapter_Alu_Com_Prog;
-import carros.com.br.crecheepreescola.adapter.SectionsPageAdapter_Tur_Cal;
 import carros.com.br.crecheepreescola.fragment.AlunosFragment;
 import carros.com.br.crecheepreescola.fragment.ComunicadoFragment;
-import carros.com.br.crecheepreescola.fragment.PCalendarioFragment;
-import carros.com.br.crecheepreescola.fragment.PTurmasFragment;
 import carros.com.br.crecheepreescola.fragment.ProgramaFragment;
 
 public class Aluno_Com_Prog_Activity extends AppCompatActivity {
@@ -40,8 +37,8 @@ public class Aluno_Com_Prog_Activity extends AppCompatActivity {
 
         SectionsPageAdapter_Alu_Com_Prog adapter = new SectionsPageAdapter_Alu_Com_Prog(getSupportFragmentManager());
         adapter.addFragment(new AlunosFragment(), "ALUNOS");
-        adapter.addFragment(new ComunicadoFragment(), "COMUNICADO");
-        adapter.addFragment(new ProgramaFragment(), "PROGRAMA");
+        adapter.addFragment(new ComunicadoFragment(), "COMUNICADOS");
+        adapter.addFragment(new ProgramaFragment(), "PROGRAMAS");
         viewPager.setAdapter(adapter);
     }
 }

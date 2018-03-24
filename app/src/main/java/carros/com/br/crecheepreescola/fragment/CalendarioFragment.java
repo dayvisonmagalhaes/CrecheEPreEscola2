@@ -13,14 +13,14 @@ import carros.com.br.crecheepreescola.R;
  * Created by Dayvison_Not on 19/03/2018.
  */
 
-public class DiarioFragment extends Fragment{
+public class CalendarioFragment extends Fragment{
 
-    private static final String TAG = "DiarioFragment";
+    private static final String TAG = "ComunicadoFragment";
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.diario_fragment, container, false);
+        View view = inflater.inflate(R.layout.calendario_fragment, container, false);
 
         return view;
     }

@@ -8,16 +8,10 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Aluno"/>
+        android:text="Calendário"/>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/btnAlunoProfessor"
-        android:text="Activity - Diário_Msg - Professor"/>
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnAlunoResponsavel"
-        android:text="Activity - Diário_Msg - Responsável"/>
+        android:id="@+id/btnAluno"
+        android:text="calendario-testar"/>
 </LinearLayout>

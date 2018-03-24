@@ -1,13 +1,14 @@
 package carros.com.br.crecheepreescola.dominio;
 
+import java.io.Serializable;
+
 /**
  * Created by Dayvison_Not on 21/03/2018.
  */
 
-public class Diario {
+public class Diario implements Serializable{
 
     private int id;
-    private String nome;
     private String presenca;
     private String data;
     private String mamadeira;
@@ -29,7 +30,6 @@ public class Diario {
     public String toString() {
         return "Diario{" +
                 "id=" + id +
-                ", nome='" + nome + '\'' +
                 ", presenca='" + presenca + '\'' +
                 ", data='" + data + '\'' +
                 ", mamadeira='" + mamadeira + '\'' +
@@ -48,15 +48,7 @@ public class Diario {
                 '}';
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public void setNome(String nome) {
-        this.nome = nome;
-    }
-
-    public String getPresenca() {
+   public String getPresenca() {
         return presenca;
     }
 

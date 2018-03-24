@@ -10,7 +10,7 @@ import android.util.Log;
 import carros.com.br.crecheepreescola.R;
 import carros.com.br.crecheepreescola.adapter.SectionsPageAdapter_Tur_Cal;
 import carros.com.br.crecheepreescola.fragment.PCalendarioFragment;
-import carros.com.br.crecheepreescola.fragment.PTurmasFragment;
+import carros.com.br.crecheepreescola.fragment.TurmasFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
     private void setupViewPager (ViewPager viewPager){
 
         SectionsPageAdapter_Tur_Cal adapter = new SectionsPageAdapter_Tur_Cal(getSupportFragmentManager());
-        adapter.addFragment(new PTurmasFragment(), "TURMAS");
+        adapter.addFragment(new TurmasFragment(), "TURMAS");
         adapter.addFragment(new PCalendarioFragment(), "CALENDÁRIO");
         viewPager.setAdapter(adapter);
     }

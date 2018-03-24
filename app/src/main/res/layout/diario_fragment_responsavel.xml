@@ -1,0 +1,276 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="carros.com.br.crecheepreescola.fragment.DiarioFragment2">
+
+    <TextView
+        android:id="@+id/tituloInicial"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/holo_green_dark"
+        android:text="@string/diario_titulo_inicial"
+        android:textAlignment="center"
+        android:textSize="18dp" />
+    <!--
+        <ImageView
+            android:id="@+id/foto"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+
+    android:src="@drawable/foto_crianca" />-->
+
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDiario"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/presenca"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/diario_titulo_presenca"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/respPresenca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="@string/resposta_diario_responsavel"
+                    android:layout_marginStart="30dp"/>
+
+
+                <TextView
+                    android:id="@+id/mamadeira"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/diario_titulo_mamadeira"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/respMamadeira"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="@string/resposta_diario_responsavel"
+                    android:layout_marginStart="30dp"/>
+
+
+                <TextView
+                    android:id="@+id/lancheManha"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/diario_lanche_manha"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/respLancheManha"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="@string/resposta_diario_responsavel"
+                    android:layout_marginStart="30dp"/>
+
+                <TextView
+                    android:id="@+id/almoco"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/diario_almoco"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/respAlmoco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="@string/resposta_diario_responsavel"
+                    android:layout_marginStart="30dp"/>
+
+
+                <TextView
+                    android:id="@+id/lancheTarde"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/diario_lanche_da_tarde"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/respLancheTarde"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="@string/resposta_diario_responsavel"
+                    android:layout_marginStart="30dp"/>
+
+
+                <TextView
+                    android:id="@+id/jantar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/diario_jantar"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/respJantar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="@string/resposta_diario_responsavel"
+                    android:layout_marginStart="30dp"/>
+
+                <TextView
+                    android:id="@+id/remedio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/diario_titulo_remedios"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/respRemedio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="@string/resposta_diario_responsavel"
+                    android:layout_marginStart="30dp"/>
+
+
+                <TextView
+                    android:id="@+id/participacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/diario_titulo_participacao"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/respParticipacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="@string/resposta_diario_responsavel"
+                    android:layout_marginStart="30dp"/>
+
+
+                <TextView
+                    android:id="@+id/sono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/diario_titulo_sono"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/respSono"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="@string/resposta_diario_responsavel"
+                    android:layout_marginStart="30dp"/>
+
+
+                <TextView
+                    android:id="@+id/evacuacao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/diario_titulo_evacuacao"
+                    android:layout_marginStart="8dp"/>
+
+                <TextView
+                    android:id="@+id/respEvacuacao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="@string/resposta_diario_responsavel"
+                    android:layout_marginStart="30dp"/>
+
+
+                <TextView
+                    android:id="@+id/resumoDia"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:layout_marginTop="20dp"
+                    android:background="@android:color/holo_green_light"
+                    android:text="@string/diario_titulo_resumo_dia"
+                    android:layout_marginStart="8dp" />
+
+                <TextView
+                    android:id="@+id/respResumoDia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@android:color/darker_gray"
+                    android:text="@string/resposta_diario_responsavel"
+                    android:layout_marginStart="30dp" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+</LinearLayout>

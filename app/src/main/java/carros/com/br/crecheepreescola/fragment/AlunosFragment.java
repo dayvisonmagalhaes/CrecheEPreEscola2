@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import carros.com.br.crecheepreescola.R;
+import carros.com.br.crecheepreescola.activity.Diario_Comun_Calendario_Msg_Activity;
 import carros.com.br.crecheepreescola.activity.Diario_Msg_Activity;
 
 /**
@@ -19,22 +20,31 @@ import carros.com.br.crecheepreescola.activity.Diario_Msg_Activity;
 public class AlunosFragment extends Fragment{
 
     private static final String TAG = "AlunosFragment";
-    private Button btnAluno;
-
+    private Button btnAlunoProfessor;
+    private Button btnAlunoResponsavel;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.aluno_fragment, container, false);
 
-        btnAluno = (Button) view.findViewById(R.id.btnAluno);
+        btnAlunoProfessor = (Button) view.findViewById(R.id.btnAlunoProfessor);
 
-        btnAluno.setOnClickListener(new View.OnClickListener() {
+        btnAlunoProfessor.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getActivity(), Diario_Msg_Activity.class);
                 startActivity(intent);
             }
         });
+
+        btnAlunoResponsavel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getActivity(), Diario_Comun_Calendario_Msg_Activity.class);
+                startActivity(intent);
+            }
+        });
+
         return view;
     }
 }

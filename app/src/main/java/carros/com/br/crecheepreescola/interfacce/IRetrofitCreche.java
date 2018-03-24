@@ -17,7 +17,7 @@ import retrofit2.http.Path;
 public interface IRetrofitCreche {
 
     @POST("Diario/inserir")
-    Call <Diario> postDiario(@Body Diario diario);
+    Call <Boolean> postDiario(@Body Diario diario);
 
 //    @GET("Estado/listar")
 //    Call <List<Estado>> getEstados();

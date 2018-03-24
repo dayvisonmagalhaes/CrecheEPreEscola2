@@ -25,6 +25,7 @@
     <string name="diario_titulo_resumo_dia">Resumo do dia?</string>
     <string name="diario_titulo_obs_remedios">Digite aqui as observações</string>
     <string name="diario_resumoDia_info">Digite aqui o resumo do dia</string>
+    <string name="resposta_diario_responsavel">Ainda não informado!</string>
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>

@@ -17,9 +17,9 @@ import carros.com.br.crecheepreescola.activity.Aluno_Com_Prog_Activity;
  * Created by Dayvison_Not on 19/03/2018.
  */
 
-public class PTurmasFragment extends Fragment{
+public class TurmasFragment extends Fragment{
 
-    private static final String TAG = "PTurmasFragment";
+    private static final String TAG = "TurmasFragment";
 
     private Button btnTurmasTest;
 
