@@ -22,8 +22,31 @@ public class Diario {
     private String tempoSono;
     private String evacuacao;
     private String resumoDia;
-    private int aluno_id;
+    private int alunoId;
 
+
+    @Override
+    public String toString() {
+        return "Diario{" +
+                "id=" + id +
+                ", nome='" + nome + '\'' +
+                ", presenca='" + presenca + '\'' +
+                ", data='" + data + '\'' +
+                ", mamadeira='" + mamadeira + '\'' +
+                ", lancheManha='" + lancheManha + '\'' +
+                ", almoco='" + almoco + '\'' +
+                ", lancheTarde='" + lancheTarde + '\'' +
+                ", jantar='" + jantar + '\'' +
+                ", remedios='" + remedios + '\'' +
+                ", obsRemedios='" + obsRemedios + '\'' +
+                ", participacao='" + participacao + '\'' +
+                ", sono='" + sono + '\'' +
+                ", tempoSono='" + tempoSono + '\'' +
+                ", evacuacao='" + evacuacao + '\'' +
+                ", resumoDia='" + resumoDia + '\'' +
+                ", aluno_id=" + alunoId +
+                '}';
+    }
 
     public String getNome() {
         return nome;
@@ -153,11 +176,11 @@ public class Diario {
         this.resumoDia = resumoDia;
     }
 
-    public int getAluno_id() {
-        return aluno_id;
+    public int getAlunoId() {
+        return alunoId;
     }
 
-    public void setAluno_id(int aluno_id) {
-        this.aluno_id = aluno_id;
+    public void setAlunoId(int alunoId) {
+        this.alunoId = alunoId;
     }
 }

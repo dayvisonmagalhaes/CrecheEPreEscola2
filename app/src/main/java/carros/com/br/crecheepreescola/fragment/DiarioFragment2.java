@@ -37,7 +37,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class DiarioFragment2 extends Fragment {
 
-    private static final String BASE_URL = "http://192.168.1.123:8080/WebServiceCreche/webresources/Creches/";
+    private static final String BASE_URL = "http://localhost:8080/WebServiceCreche/webresources/Creches/";
     Diario diario = new Diario();//             http://localhost:8080/WebServiceCreche/webresources/Creches/Diario/inserir
     SimpleDateFormat dateFormat;
     Date data;
@@ -69,7 +69,6 @@ public class DiarioFragment2 extends Fragment {
         View view = inflater.inflate(R.layout.fragment_diario_fragment2, container, false);
 
 
-
         btnSalvarDiario = (Button) view.findViewById(R.id.salvarDiario);
         tvTituloInicialNome = (TextView) view.findViewById(R.id.tituloInicial);
         groupPresenca = (RadioGroup) view.findViewById(R.id.groupPresenca);
@@ -86,42 +85,39 @@ public class DiarioFragment2 extends Fragment {
         groupEvacuacao = (RadioGroup) view.findViewById(R.id.groupEvacuacao);
         resumoDiaET = (EditText) view.findViewById(R.id.resumoDiaET);
 
-
-
         btnSalvarDiario.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-
-                diario.setNome((String) tvTituloInicialNome.getText());
-                diario.setPresenca(onRadioGroupPresenca(view));
-
-                diario.setMamadeira(onRadioGroupMamadeira(view));
-                diario.setData(obterDataAtual());
-                diario.setLancheManha(onRadioGroupLancheManha(view));
-                diario.setAlmoco(onRadioGroupAlmoco(view));
-                diario.setLancheTarde(onRadioGroupLancheTarde(view));
-                diario.setJantar(onRadioGroupJantar(view));
-                diario.setRemedios(onRadioGroupRemedios(view));
-                diario.setObsRemedios(obsRemedio.getText().toString());
-                diario.setParticipacao(onRadioGroupParticipacao(view));
-                diario.setSono(onRadioGroupSono(view));
-                diario.setTempoSono(SonoTempo.getText().toString());
-                diario.setEvacuacao(onRadioGroupEvacuacao(view));
-                diario.setResumoDia(resumoDiaET.getText().toString());
+//                diario.setNome("Lucy9");
+//                diario.setPresenca(onRadioGroupPresenca(view));
+//                diario.setMamadeira(onRadioGroupMamadeira(view));
+//                diario.setData(obterDataAtual());
+//                diario.setLancheManha(onRadioGroupLancheManha(view));
+//                diario.setAlmoco(onRadioGroupAlmoco(view));
+//                diario.setLancheTarde(onRadioGroupLancheTarde(view));
+//                diario.setJantar(onRadioGroupJantar(view));
+//                diario.setRemedios(onRadioGroupRemedios(view));
+//                diario.setObsRemedios(obsRemedio.getText().toString());
+//                diario.setParticipacao(onRadioGroupParticipacao(view));
+//                diario.setSono(onRadioGroupSono(view));
+//                diario.setTempoSono(SonoTempo.getText().toString());
+//                diario.setEvacuacao(onRadioGroupEvacuacao(view));
+//                diario.setResumoDia(resumoDiaET.getText().toString());
+//                diario.setAlunoId(1);
                 //acrescentar oi IDdoaluno -- AQUI --
 
                 salvarDiario();
-//                Log.i("Evacuacao",diario.getEvacuacao());
-//                Toast.makeText(getActivity(),"Evacuacao: " + diario.getResumoDia(), Toast.LENGTH_LONG).show();
+               // Log.i("Data", diario.getData());
+                //Log.i("Diario: ", diario.toString());
+//                Toast.makeText(getActivity(), "Data: " + diario.getData(), Toast.LENGTH_LONG).show();
+//                Toast.makeText(getActivity(), "Diário: " + diario.toString(), Toast.LENGTH_LONG).show();
             }
 
 
         });
 
-       //
-
-        return  view;
+        return view;
     }
 
 //    @Override
@@ -131,62 +127,70 @@ public class DiarioFragment2 extends Fragment {
 //        salvarDiario();
 //    }
 
-    private void salvarDiario(){
+    private void salvarDiario() {
 
-        //Gson g = new Gson();
+//        Gson g = new Gson();
+//
+//        Retrofit retrofit = new Retrofit.Builder()
+//                .baseUrl(BASE_URL)
+//                .addConverterFactory(GsonConverterFactory.create())
+//                .build();
+//
+//        IRetrofitCreche service = retrofit.create(IRetrofitCreche.class);
+//
+//        new GsonBuilder().registerTypeAdapter(Diario.class, new DiarioDesc()).create();
+//
+//        Call<Diario> diarioCall = service.postDiario(diario);
+//
+//        diarioCall.enqueue(new Callback<Diario>() {
 
-        Retrofit retrofit = new Retrofit.Builder()
-                .baseUrl(BASE_URL)
-                .addConverterFactory(GsonConverterFactory.create())
-                .build();
+        Retrofit.Builder builder = new Retrofit.Builder()
+                .baseUrl("http://192.168.254.5:8080/WebServiceCreche/webresources/Creches/")
+                .addConverterFactory(GsonConverterFactory.create());
 
-        IRetrofitCreche service = retrofit.create(IRetrofitCreche.class);
+        Retrofit retrofit = builder.build();
+        IRetrofitCreche call = retrofit.create(IRetrofitCreche.class);
 
-        new GsonBuilder().registerTypeAdapter(Diario.class, new DiarioDesc()).create();
-
-        Call<Diario> diarioCall = service.postDiario(diario);
+        retrofit2.Call<Diario> diarioCall = call.postDiario(diario);
 
         diarioCall.enqueue(new Callback<Diario>() {
-
             @Override
             public void onResponse(Call<Diario> call, Response<Diario> response) {
+                Toast.makeText(getActivity(), "Salvo com sucesso" , Toast.LENGTH_LONG).show();
 
-                if (response.isSuccessful()) {
-                    Toast.makeText(getActivity(), "Diário inserido com sucesso!", Toast.LENGTH_LONG).show();
-
-                }
             }
 
             @Override
             public void onFailure(Call<Diario> call, Throwable t) {
+
                 Toast.makeText(getActivity(), "Caiu no ERRO: " + t.getMessage(), Toast.LENGTH_LONG).show();
+
             }
         });
-
 
     }
 
 
 
-    public String onRadioGroupPresenca (View view){
+    public String onRadioGroupPresenca(View view) {
 
         String presenca = "";
 
-        switch (groupPresenca.getCheckedRadioButtonId()){
+        switch (groupPresenca.getCheckedRadioButtonId()) {
             case R.id.radioSim:
-                    presenca = "Sim";
+                presenca = "Sim";
                 break;
             case R.id.radioNao:
-                    presenca = "Não";
+                presenca = "Não";
         }
         return presenca;
     }
 
-    public String onRadioGroupMamadeira (View view){
+    public String onRadioGroupMamadeira(View view) {
 
         String mamadeira = "";
 
-        switch (groupMamadeira.getCheckedRadioButtonId()){
+        switch (groupMamadeira.getCheckedRadioButtonId()) {
             case R.id.radioMamadeiraNaoAceitou:
                 mamadeira = "Não aceitou";
                 break;
@@ -202,11 +206,11 @@ public class DiarioFragment2 extends Fragment {
         return mamadeira;
     }
 
-    public String onRadioGroupLancheManha (View view){
+    public String onRadioGroupLancheManha(View view) {
 
         String lancheManha = "";
 
-        switch (groupLancheManha.getCheckedRadioButtonId()){
+        switch (groupLancheManha.getCheckedRadioButtonId()) {
             case R.id.radioLancheNaoAceitou:
                 lancheManha = "Não aceitou";
                 break;
@@ -222,11 +226,11 @@ public class DiarioFragment2 extends Fragment {
         return lancheManha;
     }
 
-    public String onRadioGroupAlmoco (View view){
+    public String onRadioGroupAlmoco(View view) {
 
         String almoco = "";
 
-        switch (groupAlmoco.getCheckedRadioButtonId()){
+        switch (groupAlmoco.getCheckedRadioButtonId()) {
             case R.id.radioAlmocoNaoAceitou:
                 almoco = "Não aceitou";
                 break;
@@ -242,11 +246,11 @@ public class DiarioFragment2 extends Fragment {
         return almoco;
     }
 
-    public String onRadioGroupLancheTarde (View view){
+    public String onRadioGroupLancheTarde(View view) {
 
         String lancheTarde = "";
 
-        switch (groupLancheTarde.getCheckedRadioButtonId()){
+        switch (groupLancheTarde.getCheckedRadioButtonId()) {
             case R.id.radioLancheTardeNaoAceitou:
                 lancheTarde = "Não aceitou";
                 break;
@@ -262,11 +266,11 @@ public class DiarioFragment2 extends Fragment {
         return lancheTarde;
     }
 
-    public String onRadioGroupJantar (View view){
+    public String onRadioGroupJantar(View view) {
 
         String jantar = "";
 
-        switch (groupJantar.getCheckedRadioButtonId()){
+        switch (groupJantar.getCheckedRadioButtonId()) {
             case R.id.radioJantarNaoAceitou:
                 jantar = "Não aceitou";
                 break;
@@ -282,11 +286,11 @@ public class DiarioFragment2 extends Fragment {
         return jantar;
     }
 
-    public String onRadioGroupRemedios (View view){
+    public String onRadioGroupRemedios(View view) {
 
         String remedios = "";
 
-        switch (groupRemedio.getCheckedRadioButtonId()){
+        switch (groupRemedio.getCheckedRadioButtonId()) {
             case R.id.radioRemedioSim:
                 remedios = "Sim";
                 break;
@@ -297,11 +301,11 @@ public class DiarioFragment2 extends Fragment {
         return remedios;
     }
 
-    public String onRadioGroupParticipacao (View view){
+    public String onRadioGroupParticipacao(View view) {
 
         String participacao = "";
 
-        switch (groupParticipacao.getCheckedRadioButtonId()){
+        switch (groupParticipacao.getCheckedRadioButtonId()) {
             case R.id.radioParticNaoAceitou:
                 participacao = "Não participou";
                 break;
@@ -317,11 +321,11 @@ public class DiarioFragment2 extends Fragment {
         return participacao;
     }
 
-    public String onRadioGroupSono (View view){
+    public String onRadioGroupSono(View view) {
 
         String Sono = "";
 
-        switch (groupSono.getCheckedRadioButtonId()){
+        switch (groupSono.getCheckedRadioButtonId()) {
             case R.id.radioSonoSim:
                 Sono = "Sim";
                 break;
@@ -333,11 +337,11 @@ public class DiarioFragment2 extends Fragment {
         return Sono;
     }
 
-    public String onRadioGroupEvacuacao (View view){
+    public String onRadioGroupEvacuacao(View view) {
 
         String evacuacao = "";
 
-        switch (groupEvacuacao.getCheckedRadioButtonId()){
+        switch (groupEvacuacao.getCheckedRadioButtonId()) {
             case R.id.radioEvacNao:
                 evacuacao = "Não evacuou";
                 break;
@@ -353,7 +357,7 @@ public class DiarioFragment2 extends Fragment {
         return evacuacao;
     }
 
-    public String obterDataAtual(){
+    public String obterDataAtual() {
 
         dateFormat = new SimpleDateFormat("dd-MM-yyy");
         data = new Date();
@@ -362,7 +366,6 @@ public class DiarioFragment2 extends Fragment {
         return dataFormatada;
 
     }
-
 
 
 }
