@@ -18,9 +18,9 @@
     <string name="diario_jantar">Jantar?</string>
     <string name="diario_titulo_remedios">Remédios?</string>
     <string name="diario_titulo_participacao">Participou das atividades?</string>
-    <string name="diario_titulo_sono">Sono:</string>
+    <string name="diario_titulo_sono">Sono?</string>
     <string name="diario_sono_tempo">Digite aqui o tempo?</string>
-    <string name="diario_titulo_evacuacao">Evacuação:</string>
+    <string name="diario_titulo_evacuacao">Evacuação?</string>
     <string name="diario_evacuacao_intensidade">Intensidade?</string>
     <string name="diario_titulo_resumo_dia">Resumo do dia?</string>
     <string name="diario_titulo_obs_remedios">Digite aqui as observações</string>

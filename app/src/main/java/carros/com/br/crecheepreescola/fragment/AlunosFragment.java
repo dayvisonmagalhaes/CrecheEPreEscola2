@@ -37,13 +37,13 @@ public class AlunosFragment extends Fragment{
             }
         });
 
-        btnAlunoResponsavel.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intent = new Intent(getActivity(), Diario_Comun_Calendario_Msg_Activity.class);
-                startActivity(intent);
-            }
-        });
+//        btnAlunoResponsavel.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View view) {
+//                Intent intent = new Intent(getActivity(), AlunosFragment.class);
+//                startActivity(intent);
+//            }
+//        });
 
         return view;
     }

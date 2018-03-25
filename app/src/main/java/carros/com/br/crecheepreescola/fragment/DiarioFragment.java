@@ -2,31 +2,23 @@ package carros.com.br.crecheepreescola.fragment;
 
 
 import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
-import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import carros.com.br.crecheepreescola.R;
-import carros.com.br.crecheepreescola.deserializer.DiarioDesc;
 import carros.com.br.crecheepreescola.dominio.Diario;
 import carros.com.br.crecheepreescola.interfacce.IRetrofitCreche;
-import carros.com.br.crecheepreescola.service.DiarioService;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -36,7 +28,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class DiarioFragment2 extends Fragment {
+public class DiarioFragment extends Fragment {
 
     private static final String BASE_URL = "http://localhost:8080/WebServiceCreche/webresources/Creches/";
     Diario diario = new Diario();//             http://localhost:8080/WebServiceCreche/webresources/Creches/Diario/inserir
@@ -60,7 +52,7 @@ public class DiarioFragment2 extends Fragment {
     private LinearLayout linearLayoutBtnSalvar;
     private LinearLayout linearLayoutDiario;
 
-    public DiarioFragment2() {
+    public DiarioFragment() {
         // Required empty public constructor
     }
 
@@ -69,7 +61,7 @@ public class DiarioFragment2 extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view = inflater.inflate(R.layout.fragment_diario_fragment2, container, false);
+        View view = inflater.inflate(R.layout.fragment_diario_fragment, container, false);
 
 
         btnSalvarDiario = (Button) view.findViewById(R.id.salvarDiario);

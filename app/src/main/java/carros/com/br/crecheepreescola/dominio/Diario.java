@@ -9,6 +9,7 @@ import java.io.Serializable;
 public class Diario implements Serializable{
 
     private int id;
+    private String nome;
     private String presenca;
     private String data;
     private String mamadeira;
@@ -48,7 +49,15 @@ public class Diario implements Serializable{
                 '}';
     }
 
-   public String getPresenca() {
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getPresenca() {
         return presenca;
     }
 

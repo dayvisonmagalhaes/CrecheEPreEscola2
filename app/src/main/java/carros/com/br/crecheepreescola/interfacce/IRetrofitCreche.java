@@ -19,6 +19,9 @@ public interface IRetrofitCreche {
     @POST("Diario/inserir")
     Call <Boolean> postDiario(@Body Diario diario);
 
+    @GET("Diario/diarioAluno/{idAluno},{idResponsavel}")
+    Call <Diario> getDiarios(@Path("idAluno") int idAluno, @Path("idResponsavel") int idResponsavel );
+
 //    @GET("Estado/listar")
 //    Call <List<Estado>> getEstados();
 //

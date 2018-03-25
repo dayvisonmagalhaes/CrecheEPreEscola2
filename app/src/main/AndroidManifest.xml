@@ -27,6 +27,7 @@
         <activity android:name=".activity.MainActivity" />
         <activity android:name=".activity.Aluno_Com_Prog_Activity" />
         <activity android:name=".activity.Turma_Calend_Activity" />
+        <activity android:name=".activity.Alunos_Responsavel_Activity" />
         <activity android:name=".activity.Diario_Msg_Activity"> </activity>
     </application>
 
