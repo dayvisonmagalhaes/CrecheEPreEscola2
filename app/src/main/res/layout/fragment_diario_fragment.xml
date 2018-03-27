@@ -19,9 +19,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="20dp"-->
+            android:layout_marginTop="20dp"
 
-    android:src="@drawable/foto_crianca" />
+    android:src="@drawable/foto_crianca" />-->
 
     <TextView
         android:id="@+id/presenca"
@@ -348,7 +348,8 @@
                     android:id="@+id/obsRemedio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/diario_titulo_obs_remedios" />
+                    android:hint="@string/diario_titulo_obs_remedios"
+                    android:visibility="invisible"/>
 
                 <TextView
                     android:id="@+id/participacao"
@@ -435,7 +436,8 @@
                     android:id="@+id/sonoTempo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="@string/diario_sono_tempo" />
+                    android:hint="@string/diario_sono_tempo"
+                    android:visibility="invisible"/>
 
                 <TextView
                     android:id="@+id/evacuacao"

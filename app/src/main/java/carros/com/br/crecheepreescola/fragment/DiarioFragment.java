@@ -1,6 +1,8 @@
 package carros.com.br.crecheepreescola.fragment;
 
 
+import android.app.DialogFragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -30,8 +32,8 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class DiarioFragment extends Fragment {
 
-    private static final String BASE_URL = "http://localhost:8080/WebServiceCreche/webresources/Creches/";
-    Diario diario = new Diario();//             http://localhost:8080/WebServiceCreche/webresources/Creches/Diario/inserir
+    private static final String BASE_URL = "http://192.168.254.5:8080/WebServiceCreche/webresources/Creches/";
+    Diario diario = null;//             http://localhost:8080/WebServiceCreche/webresources/Creches/Diario/inserir
     SimpleDateFormat dateFormat;
     Date data;
     private Button btnSalvarDiario;
@@ -94,7 +96,35 @@ public class DiarioFragment extends Fragment {
                         linearLayoutDiario.setVisibility(View.INVISIBLE);
                         linearLayoutBtnSalvar.setVisibility(View.INVISIBLE);
                 }
+            }
+        });
 
+        groupRemedio.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch (groupRemedio.getCheckedRadioButtonId()) {
+                    case R.id.radioRemedioSim:
+                        obsRemedio.setVisibility(View.VISIBLE);
+
+                        break;
+                    case R.id.radioRemedioNao:
+                        obsRemedio.setVisibility(View.INVISIBLE);
+
+                }
+            }
+        });
+        groupSono.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                switch (groupSono.getCheckedRadioButtonId()) {
+                    case R.id.radioSonoSim:
+                        SonoTempo.setVisibility(View.VISIBLE);
+
+                        break;
+                    case R.id.radioSonoNao:
+                        SonoTempo.setVisibility(View.INVISIBLE);
+
+                }
             }
         });
 
@@ -102,7 +132,7 @@ public class DiarioFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
-
+                diario = new Diario();
                 diario.setPresenca(onRadioGroupPresenca(view));
                 diario.setMamadeira(onRadioGroupMamadeira(view));
                 diario.setData(obterDataAtual());
@@ -118,8 +148,6 @@ public class DiarioFragment extends Fragment {
                 diario.setEvacuacao(onRadioGroupEvacuacao(view));
                 diario.setResumoDia(resumoDiaET.getText().toString());
                 diario.setAlunoId(1);
-                //acrescentar oi IDdoaluno -- AQUI --
-
 
                 salvarDiario();
                // Log.i("Data", diario.getData());
@@ -134,13 +162,7 @@ public class DiarioFragment extends Fragment {
         return view;
     }
 
-//    @Override
-//    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
-//        super.onActivityCreated(savedInstanceState);
 //
-//        visualizarDiario();
-//    }
-
     private void salvarDiario() {
 
         Retrofit.Builder builder = new Retrofit.Builder()
@@ -150,12 +172,14 @@ public class DiarioFragment extends Fragment {
         Retrofit retrofit = builder.build();
         IRetrofitCreche call = retrofit.create(IRetrofitCreche.class);
 
+
         retrofit2.Call<Boolean> diarioCall = call.postDiario(diario);
 
         diarioCall.enqueue(new Callback<Boolean>() {
             @Override
             public void onResponse(Call<Boolean> call, Response<Boolean> response) {
                 Toast.makeText(getActivity(), "Salvo com sucesso", Toast.LENGTH_LONG).show();
+                closefragment();
 
             }
 
@@ -363,6 +387,10 @@ public class DiarioFragment extends Fragment {
 
         return dataFormatada;
 
+    }
+
+    private void closefragment() {
+        getActivity().finish();
     }
 
 
