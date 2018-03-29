@@ -31,7 +31,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class TurmasFragment extends Fragment{
 
     List<Turma> turmas;
-    private int idProfessor = 1;
+    private int idProfessor = 1; //AINDA EM TESTES, POIS ESSE ID SERÁ CAPTURADO DA TELA DE LOGIN QUE AINDA NÃO FOI IMPLEMENTADA
     private static final String BASE_URL = "http://192.168.0.115:8080/WebServiceCreche/webresources/Creches/";
     private static final String TAG = "TurmasFragment";
 
@@ -95,20 +95,6 @@ public class TurmasFragment extends Fragment{
         });
 
 
-
-
-//       btnTurmasTest = (Button) view.findViewById(R.id.btnTurmas);
-//
-//       btnTurmasTest.setOnClickListener(new View.OnClickListener() {
-//           @Override
-//           public void onClick(View view) {
-//               //Toast.makeText(getActivity(),"Testando", Toast.LENGTH_LONG).show();
-//
-//               Intent intent;
-//               intent = new Intent(getActivity(), Aluno_Com_Prog_Activity.class);
-//               startActivity(intent);
-//           }
-//       });
         return view;
     }
 }

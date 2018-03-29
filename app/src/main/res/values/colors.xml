@@ -5,4 +5,5 @@
     <color name="colorAccent">#FF4081</color>
     <color name="colorBackgroundButton">#e6edd9</color>
     <color name="colorItem">#eaeaea</color>
+    <color name="color_list_item_turma">#dedddd</color>
 </resources>

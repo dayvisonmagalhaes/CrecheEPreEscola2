@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.widget.Button;
 
 import carros.com.br.crecheepreescola.R;
+import carros.com.br.crecheepreescola.activity.Aluno_Com_Prog_Activity;
 import carros.com.br.crecheepreescola.activity.Diario_Comun_Calendario_Msg_Activity;
 import carros.com.br.crecheepreescola.activity.Diario_Msg_Activity;
 
@@ -22,10 +23,15 @@ public class AlunosFragment extends Fragment{
     private static final String TAG = "AlunosFragment";
     private Button btnAlunoProfessor;
     private Button btnAlunoResponsavel;
+    private int idTurma;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.aluno_fragment, container, false);
+
+        Aluno_Com_Prog_Activity aluno_com_prog_activity = new Aluno_Com_Prog_Activity();
+        idTurma = aluno_com_prog_activity.getId();
+
 
         btnAlunoProfessor = (Button) view.findViewById(R.id.btnAlunoProfessor);
 
@@ -36,6 +42,9 @@ public class AlunosFragment extends Fragment{
                 startActivity(intent);
             }
         });
+
+
+
 
 //        btnAlunoResponsavel.setOnClickListener(new View.OnClickListener() {
 //            @Override

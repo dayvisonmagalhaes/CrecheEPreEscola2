@@ -15,9 +15,5 @@
         android:id="@+id/btnAlunoProfessor"
         android:text="Activity - Diário_Msg - Professor"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/btnAlunoResponsavel"
-        android:text="Activity - Diário_Msg - Responsável"/>
+
 </LinearLayout>

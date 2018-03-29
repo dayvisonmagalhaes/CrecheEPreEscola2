@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="horizontal"
+    android:id="@+id/list_item"
     android:background="@color/colorItem">
 
     <android.support.v7.widget.CardView
@@ -12,13 +13,14 @@
         android:id="@+id/cardViewListaTurma"
         android:paddingTop="20dp"
         android:paddingBottom="20dp"
-        app:cardBackgroundColor="@color/colorPrimary"
-        app:cardElevation="2dp">
-    <ImageView
+        app:cardBackgroundColor="@color/color_list_item_turma"
+        app:cardElevation="4dp">
+    <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imagemViewListItemTurma"
         android:src="@mipmap/ic_launcher"
+        android:layout_marginRight="20dp"
         android:scaleType="centerCrop"/>
 
     <TextView
@@ -26,6 +28,8 @@
         android:layout_height="wrap_content"
         android:id="@+id/textViewListItemTurma"
         android:text="teste"
+        android:textColor="@color/colorPrimary"
+        android:textSize="20dp"
         android:layout_gravity="center"/>
     </android.support.v7.widget.CardView>
 </LinearLayout>

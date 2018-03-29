@@ -148,7 +148,7 @@ public class DiarioFragment extends Fragment {
                 diario.setTempoSono(SonoTempo.getText().toString());
                 diario.setEvacuacao(onRadioGroupEvacuacao(view));
                 diario.setResumoDia(resumoDiaET.getText().toString());
-                diario.setAlunoId(1);
+                diario.setAlunoId(1);//AINDA EM TESTES, POIS ESSE "idAluno" SERÁ CAPTURADO VIA "getIntent" DA TELA ANTERIOR (AlunosFragment)
 
                 salvarDiario();
                // Log.i("Data", diario.getData());
