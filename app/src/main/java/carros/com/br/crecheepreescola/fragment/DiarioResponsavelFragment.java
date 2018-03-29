@@ -30,7 +30,7 @@ public class DiarioResponsavelFragment extends Fragment{
     private static final String TAG = "DiarioFragment";
     private int idAluno = 1;//precisa recuperar esse ID através da lista de alunos (tela anterior)
     private int idResponsavel = 2;//igualmente
-    private static final String BASE_URL = "http://192.168.254.5:8080/WebServiceCreche/webresources/Creches/";
+    private static final String BASE_URL = "http://192.168.0.115:8080/WebServiceCreche/webresources/Creches/";
 
     private TextView tituloInicial;
     private TextView respPresenca;

@@ -4,6 +4,7 @@ import java.util.List;
 
 
 import carros.com.br.crecheepreescola.dominio.Diario;
+import carros.com.br.crecheepreescola.dominio.Turma;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.GET;
@@ -22,6 +23,8 @@ public interface IRetrofitCreche {
     @GET("Diario/diarioAluno/{idAluno},{idResponsavel}")
     Call <Diario> getDiarios(@Path("idAluno") int idAluno, @Path("idResponsavel") int idResponsavel );
 
+    @GET("Turma/listar/{idProfessor}")
+    Call <List<Turma>> getTurmas(@Path("idProfessor") int idProfessor);
 
 //    @GET("Estado/listar")
 //    Call <List<Estado>> getEstados();
