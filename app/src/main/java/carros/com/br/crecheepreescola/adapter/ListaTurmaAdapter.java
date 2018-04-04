@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.widget.CardView;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -20,7 +21,7 @@ import carros.com.br.crecheepreescola.dominio.Turma;
 
 
 public class ListaTurmaAdapter extends RecyclerView.Adapter<ListaTurmaAdapter.ListaTurmaViewHolder>
-        implements View.OnClickListener, View.OnLongClickListener {
+         {
 
 
     private List<Turma> turmaListItens;
@@ -65,6 +66,7 @@ public class ListaTurmaAdapter extends RecyclerView.Adapter<ListaTurmaAdapter.Li
             public void onClick(View view) {
                 Toast.makeText(context, "ID: " + turma.getId() + "  Nome: " + turma.getNome(), Toast.LENGTH_SHORT).show();
 
+                Log.d("Turmas" , "Turma: " + "ID: " + turma.getId() + "  Nome: " + turma.getNome()  );
                 Intent intent = new Intent(view.getContext(), Aluno_Com_Prog_Activity.class);
                 intent.putExtra("turmaSelecionada", turma);
                 view.getContext().startActivity(intent);
@@ -84,17 +86,17 @@ public class ListaTurmaAdapter extends RecyclerView.Adapter<ListaTurmaAdapter.Li
         return turmaListItens.size();
     }
 
-    @Override
-    public void onClick(View view) {
-
-
-
-    }
-
-    @Override
-    public boolean onLongClick(View view) {
-        return false;
-    }
+//    @Override
+//    public void onClick(View view) {
+//
+//
+//
+//    }
+//
+//    @Override
+//    public boolean onLongClick(View view) {
+//        return false;
+//    }
 
     public static class ListaTurmaViewHolder extends RecyclerView.ViewHolder {
 
@@ -106,7 +108,7 @@ public class ListaTurmaAdapter extends RecyclerView.Adapter<ListaTurmaAdapter.Li
         public ListaTurmaViewHolder(View view) {
             super(view);
 
-            list_item = (LinearLayout) view.findViewById(R.id.list_item);
+            list_item = (LinearLayout) view.findViewById(R.id.list_item_turma);
             cardViewListaTurma = view.findViewById(R.id.listViewTurmas);
             imagemViewListItemTurma = view.findViewById(R.id.imagemViewListItemTurma);
             textViewListItemTurma = view.findViewById(R.id.textViewListItemTurma);

@@ -3,6 +3,7 @@ package carros.com.br.crecheepreescola.interfacce;
 import java.util.List;
 
 
+import carros.com.br.crecheepreescola.dominio.Aluno;
 import carros.com.br.crecheepreescola.dominio.Diario;
 import carros.com.br.crecheepreescola.dominio.Turma;
 import retrofit2.Call;
@@ -25,6 +26,9 @@ public interface IRetrofitCreche {
 
     @GET("Turma/listar/{idProfessor}")
     Call <List<Turma>> getTurmas(@Path("idProfessor") int idProfessor);
+
+    @GET("Alunos/listarPorTurma/{idTurma}")
+    Call <List<Aluno>> getAlunos(@Path("idTurma") int idTurma);
 
 //    @GET("Estado/listar")
 //    Call <List<Estado>> getEstados();
