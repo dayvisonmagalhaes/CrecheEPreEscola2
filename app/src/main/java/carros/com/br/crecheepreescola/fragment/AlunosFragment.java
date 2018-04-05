@@ -49,31 +49,15 @@ public class AlunosFragment extends Fragment{
         View view = inflater.inflate(R.layout.alunos_fragment, container, false);
 
         Aluno_Com_Prog_Activity aluno_com_prog_activity = new Aluno_Com_Prog_Activity();
-        //idTurma = aluno_com_prog_activity.getId();
-        idTurma = 1; // TESTE
-//        btnAlunoProfessor = (Button) view.findViewById(R.id.btnAlunoProfessor);
-//
-//        btnAlunoProfessor.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getActivity(), Diario_Msg_Activity.class);
-//                startActivity(intent);
-//            }
-//        });
-//        btnAlunoResponsavel.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Intent intent = new Intent(getActivity(), AlunosFragment.class);
-//                startActivity(intent);
-//            }
-//        });
+        idTurma = aluno_com_prog_activity.obterIdTurma();
 
+        Log.d("AlunosFragment" , "TurmaID: " + idTurma );
+//
         alunos = new ArrayList<>();
 
         listViewAlunos = (RecyclerView) view.findViewById(R.id.listViewAlunos);
 
         //Configurando Layout manager para o listview
-        //StaggeredGridLayoutManager mStaggeredGridManager = new StaggeredGridLayoutManager(1,StaggeredGridLayoutManager.VERTICAL);
 
         LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getContext());
         RecyclerView.LayoutManager layoutManager = linearLayoutManager;

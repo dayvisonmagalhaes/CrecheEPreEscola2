@@ -20,15 +20,9 @@ public class Aluno_Com_Prog_Activity extends AppCompatActivity {
     private static final String TAG = "Aluno_Com_Prog_Activity";
     private SectionsPageAdapter_Alu_Com_Prog mSectionsPageAdapter;
     private ViewPager mViewPager;
-    int idTurma;
+    public static int idTurma;
 
-//    public int getId() {
-//        return idTurma;
-//    }
 //
-//    public void setId(int id) {
-//        this.idTurma = id;
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,8 +32,9 @@ public class Aluno_Com_Prog_Activity extends AppCompatActivity {
         //CAPTURANDO O "putExtra" DA TELA ANTERIOR (ListaTurmaAdapter)
         Intent intent = getIntent();
         Turma turma = intent.getParcelableExtra("turmaSelecionada");
-        //idTurma = turma.getId();
-        idTurma = 1;
+        idTurma = turma.getId();
+
+        Log.d("TurmaPacelable" , "ID: " + idTurma );
 
 
         Log.d(TAG, "onCreate: Starting.");
@@ -63,4 +58,8 @@ public class Aluno_Com_Prog_Activity extends AppCompatActivity {
         viewPager.setAdapter(adapter);
     }
 
+    public int obterIdTurma(){
+
+        return idTurma;
+    }
 }
