@@ -32,7 +32,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class DiarioFragment extends Fragment {
 
-    private static final String BASE_URL = "http://192.168.56.1:8080/WebServiceCreche/webresources/Creches/";
+    private static final String BASE_URL = "http://192.168.254.6:8080/WebServiceCreche/webresources/Creches/";
     Diario diario = null;//             http://localhost:8080/WebServiceCreche/webresources/Creches/Diario/inserir
     SimpleDateFormat dateFormat;
     Date data;

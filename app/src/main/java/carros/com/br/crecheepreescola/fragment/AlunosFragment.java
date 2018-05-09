@@ -42,7 +42,7 @@ public class AlunosFragment extends Fragment{
     private int idTurma;
     RecyclerView listViewAlunos;
     List<Aluno> alunos;
-    private static final String BASE_URL = "http://192.168.0.103:8080/WebServiceCreche/webresources/Creches/";
+    private static final String BASE_URL = "http://192.168.254.6:8080/WebServiceCreche/webresources/Creches/";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

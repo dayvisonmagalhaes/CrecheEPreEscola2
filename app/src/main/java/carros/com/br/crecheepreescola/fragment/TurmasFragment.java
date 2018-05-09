@@ -32,7 +32,7 @@ public class TurmasFragment extends Fragment{
 
     List<Turma> turmas;
     private int idProfessor = 1; //AINDA EM TESTES, POIS ESSE ID SERÁ CAPTURADO DA TELA DE LOGIN QUE AINDA NÃO FOI IMPLEMENTADA
-    private static final String BASE_URL = "http://192.168.0.103:8080/WebServiceCreche/webresources/Creches/";
+    private static final String BASE_URL = "http://192.168.254.6:8080/WebServiceCreche/webresources/Creches/";
     private static final String TAG = "TurmasFragment";
     //private Button btnTurmasTest;
     RecyclerView listViewTurmas;
