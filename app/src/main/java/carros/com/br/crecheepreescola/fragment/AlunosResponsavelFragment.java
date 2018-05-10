@@ -20,6 +20,7 @@ import carros.com.br.crecheepreescola.activity.Alunos_Responsavel_Activity;
 import carros.com.br.crecheepreescola.adapter.ListaAlunoAdapter;
 import carros.com.br.crecheepreescola.dominio.Aluno;
 import carros.com.br.crecheepreescola.interfacce.IRetrofitCreche;
+import carros.com.br.crecheepreescola.service.BaseURL;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -38,7 +39,9 @@ public class AlunosResponsavelFragment extends Fragment{
     private int idResponsavel;
     RecyclerView listViewAlunos;
     List<Aluno> alunos;
-    private static final String BASE_URL = "http://192.168.24.2:8080/WebServiceCreche/webresources/Creches/";
+    BaseURL baseURL = new BaseURL();
+    private static String BASE_URL = "";
+   // private static final String BASE_URL = "http://192.168.43.37:8080/WebServiceCreche/webresources/Creches/";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -64,6 +67,7 @@ public class AlunosResponsavelFragment extends Fragment{
 
         //criar o RecycleView adapter, antes disso vamos criar o layout para o list item
 
+        BASE_URL = baseURL.getBaseUrl();
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create());

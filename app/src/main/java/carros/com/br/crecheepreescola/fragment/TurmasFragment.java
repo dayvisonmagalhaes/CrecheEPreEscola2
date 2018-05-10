@@ -18,6 +18,7 @@ import carros.com.br.crecheepreescola.R;
 import carros.com.br.crecheepreescola.adapter.ListaTurmaAdapter;
 import carros.com.br.crecheepreescola.dominio.Turma;
 import carros.com.br.crecheepreescola.interfacce.IRetrofitCreche;
+import carros.com.br.crecheepreescola.service.BaseURL;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -31,8 +32,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class TurmasFragment extends Fragment{
 
     List<Turma> turmas;
+    BaseURL baseURL = new BaseURL();
+    private static String BASE_URL = "";
     private int idProfessor = 1; //AINDA EM TESTES, POIS ESSE ID SERÁ CAPTURADO DA TELA DE LOGIN QUE AINDA NÃO FOI IMPLEMENTADA
-    private static final String BASE_URL = "http://192.168.24.2:8080/WebServiceCreche/webresources/Creches/";
+    //private static final String BASE_URL = "http://192.168.43.37:8080/WebServiceCreche/webresources/Creches/";
     private static final String TAG = "TurmasFragment";
 
     //private Button btnTurmasTest;
@@ -58,6 +61,7 @@ public class TurmasFragment extends Fragment{
 
         //criar o RecycleView adapter, antes disso vamos criar o layout para o list item
 
+        BASE_URL = baseURL.getBaseUrl();
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create());

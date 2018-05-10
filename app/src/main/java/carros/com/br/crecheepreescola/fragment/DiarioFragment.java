@@ -22,6 +22,7 @@ import java.util.Date;
 import carros.com.br.crecheepreescola.R;
 import carros.com.br.crecheepreescola.dominio.Diario;
 import carros.com.br.crecheepreescola.interfacce.IRetrofitCreche;
+import carros.com.br.crecheepreescola.service.BaseURL;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -33,7 +34,9 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class DiarioFragment extends Fragment {
 
-    private static final String BASE_URL = "http://192.168.24.2:8080/WebServiceCreche/webresources/Creches/";
+    BaseURL baseURL = new BaseURL();
+    private static String BASE_URL = "";
+   // private static final String BASE_URL = "http://192.168.43.37:8080/WebServiceCreche/webresources/Creches/";
     Diario diario = null;//             http://localhost:8080/WebServiceCreche/webresources/Creches/Diario/inserir
     SimpleDateFormat dateFormat;
     Date data;
@@ -165,6 +168,8 @@ public class DiarioFragment extends Fragment {
 
 //
     private void salvarDiario() {
+
+        BASE_URL = baseURL.getBaseUrl();
 
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl(BASE_URL)

@@ -11,20 +11,14 @@ import carros.com.br.crecheepreescola.dominio.Diario;
  * Created by Dayvison_Not on 21/03/2018.
  */
 
-public class DiarioService {
+public class BaseURL {
 
 
 
-    public static Diario postDiario(Context context){
-
-        Diario diario = new Diario();
+    private final String BASE_URL = "http://192.168.0.100:8080/WebServiceCreche/webresources/Creches/";
 
 
-
-
-        return diario;
+    public String getBaseUrl() {
+        return BASE_URL;
     }
-
-
-
 }

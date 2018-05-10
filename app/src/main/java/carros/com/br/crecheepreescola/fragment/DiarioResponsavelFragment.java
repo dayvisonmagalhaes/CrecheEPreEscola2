@@ -15,6 +15,7 @@ import java.util.List;
 import carros.com.br.crecheepreescola.R;
 import carros.com.br.crecheepreescola.dominio.Diario;
 import carros.com.br.crecheepreescola.interfacce.IRetrofitCreche;
+import carros.com.br.crecheepreescola.service.BaseURL;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -30,7 +31,9 @@ public class DiarioResponsavelFragment extends Fragment{
     private static final String TAG = "DiarioFragment";
     private int idAluno = 1;//precisa recuperar esse ID através da lista de alunos (tela anterior)
     private int idResponsavel = 2;//igualmente
-    private static final String BASE_URL = "http://192.168.24.2:8080/WebServiceCreche/webresources/Creches/";
+    BaseURL baseURL = new BaseURL();
+    private static String BASE_URL = "";
+   // private static final String BASE_URL = "http://192.168.43.37:8080/WebServiceCreche/webresources/Creches/";
 
     private TextView tituloInicial;
     private TextView respPresenca;
@@ -84,6 +87,7 @@ public class DiarioResponsavelFragment extends Fragment{
 
     private void consultarDiario() {
 
+        BASE_URL = baseURL.getBaseUrl();
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
                 .addConverterFactory(GsonConverterFactory.create());
