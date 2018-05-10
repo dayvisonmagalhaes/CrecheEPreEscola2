@@ -5,6 +5,7 @@ import android.app.DialogFragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,7 +33,7 @@ import retrofit2.converter.gson.GsonConverterFactory;
  */
 public class DiarioFragment extends Fragment {
 
-    private static final String BASE_URL = "http://192.168.254.6:8080/WebServiceCreche/webresources/Creches/";
+    private static final String BASE_URL = "http://192.168.24.2:8080/WebServiceCreche/webresources/Creches/";
     Diario diario = null;//             http://localhost:8080/WebServiceCreche/webresources/Creches/Diario/inserir
     SimpleDateFormat dateFormat;
     Date data;
@@ -147,13 +148,13 @@ public class DiarioFragment extends Fragment {
                 diario.setTempoSono(SonoTempo.getText().toString());
                 diario.setEvacuacao(onRadioGroupEvacuacao(view));
                 diario.setResumoDia(resumoDiaET.getText().toString());
-                diario.setAlunoId(1);
+                diario.setAlunoId(1);//AINDA EM TESTES, POIS ESSE "idAluno" SERÁ CAPTURADO VIA "getIntent" DA TELA ANTERIOR (AlunosFragment)
 
                 salvarDiario();
                // Log.i("Data", diario.getData());
-                //Log.i("Diario: ", diario.toString());
+                Log.i("Diario: ", diario.toString());
                 //Toast.makeText(getActivity(), "Data: " + diario.getData(), Toast.LENGTH_LONG).show();
-                //Toast.makeText(getActivity(), "Diário: " + diario.toString(), Toast.LENGTH_LONG).show();
+               // Toast.makeText(getActivity(), "Diário: " + diario.toString(), Toast.LENGTH_LONG).show();
             }
 
 

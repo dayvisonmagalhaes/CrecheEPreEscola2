@@ -1,6 +1,5 @@
 package carros.com.br.crecheepreescola.fragment;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -17,12 +16,9 @@ import java.util.List;
 
 import carros.com.br.crecheepreescola.R;
 import carros.com.br.crecheepreescola.activity.Aluno_Com_Prog_Activity;
-import carros.com.br.crecheepreescola.activity.Diario_Comun_Calendario_Msg_Activity;
-import carros.com.br.crecheepreescola.activity.Diario_Msg_Activity;
+import carros.com.br.crecheepreescola.activity.Alunos_Responsavel_Activity;
 import carros.com.br.crecheepreescola.adapter.ListaAlunoAdapter;
-import carros.com.br.crecheepreescola.adapter.ListaTurmaAdapter;
 import carros.com.br.crecheepreescola.dominio.Aluno;
-import carros.com.br.crecheepreescola.dominio.Turma;
 import carros.com.br.crecheepreescola.interfacce.IRetrofitCreche;
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -34,13 +30,12 @@ import retrofit2.converter.gson.GsonConverterFactory;
  * Created by Dayvison_Not on 19/03/2018.
  */
 
-public class AlunosFragment extends Fragment{
+public class AlunosResponsavelFragment extends Fragment{
 
     private static final String TAG = "AlunosFragment";
     private Button btnAlunoProfessor;
     private Button btnAlunoResponsavel;
-    private int idTurma = 0;
-
+    private int idResponsavel;
     RecyclerView listViewAlunos;
     List<Aluno> alunos;
     private static final String BASE_URL = "http://192.168.24.2:8080/WebServiceCreche/webresources/Creches/";
@@ -49,11 +44,13 @@ public class AlunosFragment extends Fragment{
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.alunos_fragment, container, false);
 
-        Aluno_Com_Prog_Activity aluno_com_prog_activity = new Aluno_Com_Prog_Activity();
-        idTurma = aluno_com_prog_activity.obterIdTurma();
 
 
-        Log.d("AlunosFragment" , "TurmaID: " + idTurma );
+        Alunos_Responsavel_Activity alunos_responsavel_activity = new Alunos_Responsavel_Activity();
+
+        idResponsavel = alunos_responsavel_activity.obterIdResponsavel();
+
+        Log.d("AlunosResponsFragment" , "ResponsavelID: " + idResponsavel );
 //
         alunos = new ArrayList<>();
 
@@ -74,7 +71,7 @@ public class AlunosFragment extends Fragment{
         Retrofit retrofit = builder.build();
         IRetrofitCreche call = retrofit.create(IRetrofitCreche.class);
 
-        Call<List<Aluno>> alunoCall = call.getAlunos(idTurma);
+        Call<List<Aluno>> alunoCall = call.getAlunosResponsavel(idResponsavel);
 
         alunoCall.enqueue(new Callback<List<Aluno>>() {
             @Override
@@ -90,9 +87,9 @@ public class AlunosFragment extends Fragment{
 //                    }
 //                }
                 //Log.d("Alunos" , "onResponse" + statusCode );
-                Log.d("CodTurma" ,"ID: " + idTurma );
+                Log.d("CodTurma" ,"ID: " + idResponsavel );
 
-                ListaAlunoAdapter listaAlunoAdapter = new ListaAlunoAdapter(getContext(),alunosList);
+                ListaAlunoAdapter listaAlunoAdapter = new ListaAlunoAdapter(getContext(),alunosList,idResponsavel);
 
                 listViewAlunos.setAdapter(listaAlunoAdapter);
             }

@@ -12,10 +12,6 @@ import retrofit2.http.GET;
 import retrofit2.http.POST;
 import retrofit2.http.Path;
 
-/**
- * Created by u6390869 on 10/09/2017.
- */
-
 public interface IRetrofitCreche {
 
     @POST("Diario/inserir")
@@ -29,6 +25,9 @@ public interface IRetrofitCreche {
 
     @GET("Alunos/listarPorTurma/{idTurma}")
     Call <List<Aluno>> getAlunos(@Path("idTurma") int idTurma);
+
+    @GET("Alunos/listarPorResponsavel/{idResponsavel}")
+    Call <List<Aluno>> getAlunosResponsavel(@Path("idResponsavel") int idResponsavel);
 
 //    @GET("Estado/listar")
 //    Call <List<Estado>> getEstados();

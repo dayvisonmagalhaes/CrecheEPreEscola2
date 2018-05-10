@@ -534,20 +534,20 @@
                 android:textColor="@android:color/white" />
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="5">
+        <!--<LinearLayout-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="5">-->
 
-            <Button
-                android:id="@+id/editarDiario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:background="@android:color/darker_gray"
-                android:text="Editar"
-                android:textColor="@android:color/white" />
-        </LinearLayout>
+            <!--<Button-->
+                <!--android:id="@+id/editarDiario"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginRight="20dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="@android:color/darker_gray"-->
+                <!--android:text="Editar"-->
+                <!--android:textColor="@android:color/white" />-->
+        <!--</LinearLayout>-->
     </LinearLayout>
 </LinearLayout>

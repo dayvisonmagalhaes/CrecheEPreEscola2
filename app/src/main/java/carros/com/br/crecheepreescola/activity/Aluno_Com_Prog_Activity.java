@@ -10,6 +10,7 @@ import android.util.Log;
 import carros.com.br.crecheepreescola.R;
 import carros.com.br.crecheepreescola.adapter.SectionsPageAdapter_Alu_Com_Prog;
 import carros.com.br.crecheepreescola.dominio.Diario;
+import carros.com.br.crecheepreescola.dominio.Pessoa;
 import carros.com.br.crecheepreescola.dominio.Turma;
 import carros.com.br.crecheepreescola.fragment.AlunosFragment;
 import carros.com.br.crecheepreescola.fragment.ComunicadoFragment;
@@ -22,8 +23,6 @@ public class Aluno_Com_Prog_Activity extends AppCompatActivity {
     private ViewPager mViewPager;
     public static int idTurma;
 
-//
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -32,7 +31,9 @@ public class Aluno_Com_Prog_Activity extends AppCompatActivity {
         //CAPTURANDO O "putExtra" DA TELA ANTERIOR (ListaTurmaAdapter)
         Intent intent = getIntent();
         Turma turma = intent.getParcelableExtra("turmaSelecionada");
+        Pessoa pessoa = intent.getParcelableExtra("pessoaId");
         idTurma = turma.getId();
+
 
         Log.d("TurmaPacelable" , "ID: " + idTurma );
 
@@ -46,7 +47,6 @@ public class Aluno_Com_Prog_Activity extends AppCompatActivity {
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tabs_Aluno_Com_Prog);
         tabLayout.setupWithViewPager(mViewPager);
 
-
     }
 
     private void setupViewPager(ViewPager viewPager) {
@@ -59,7 +59,8 @@ public class Aluno_Com_Prog_Activity extends AppCompatActivity {
     }
 
     public int obterIdTurma(){
-
         return idTurma;
     }
+
+
 }

@@ -3,7 +3,7 @@ package carros.com.br.crecheepreescola.dominio;
 import java.io.Serializable;
 
 /**
- * Created by Dayvison_Not on 21/03/2018.
+ * Created by Dayvison on 21/03/2018.
  */
 
 public class Diario implements Serializable{

@@ -18,6 +18,7 @@ import java.util.List;
 
 import carros.com.br.crecheepreescola.R;
 
+import carros.com.br.crecheepreescola.activity.Diario_Comun_Calendario_Msg_Activity;
 import carros.com.br.crecheepreescola.activity.Diario_Msg_Activity;
 import carros.com.br.crecheepreescola.dominio.Aluno;
 
@@ -30,15 +31,17 @@ public class ListaAlunoAdapter extends RecyclerView.Adapter<ListaAlunoAdapter.Li
     private List<Aluno> alunoListItens;
     private Context context;
     private AdapterView.OnItemClickListener onItemClickListener;
+    private int idResponsavel = 0;
 
-    public ListaAlunoAdapter(List<Aluno> alunoListItens, Context context) {
+    public ListaAlunoAdapter(Context context, List<Aluno> alunoListItens) {
         this.alunoListItens = alunoListItens;
         this.context = context;
     }
 
-    public ListaAlunoAdapter(Context context, List<Aluno> _alunoListItens) {
+    public ListaAlunoAdapter(Context context, List<Aluno> _alunoListItens, int idResponsavel) {
         alunoListItens = _alunoListItens;
         this.context = context;
+        this.idResponsavel = idResponsavel;
     }
 
     @Override
@@ -65,9 +68,15 @@ public class ListaAlunoAdapter extends RecyclerView.Adapter<ListaAlunoAdapter.Li
             public void onClick(View view) {
                 Toast.makeText(context, "ID: " + aluno.getId() + "  Nome: " + aluno.getNome(), Toast.LENGTH_SHORT).show();
                 Log.d("Alunos" , "aluno: " + "ID: " + aluno.getId() + "  Nome: " + aluno.getNome()  );
-                Intent intent = new Intent(view.getContext(), Diario_Msg_Activity.class);
-                intent.putExtra("alunoSelecionado", aluno);
-                view.getContext().startActivity(intent);
+                if (idResponsavel != 0){
+                    Intent intent = new Intent(view.getContext(), Diario_Comun_Calendario_Msg_Activity.class);
+                    intent.putExtra("alunoSelecionado", aluno);
+                    view.getContext().startActivity(intent);
+                }else {
+                    Intent intent = new Intent(view.getContext(), Diario_Msg_Activity.class);
+                    intent.putExtra("alunoSelecionado", aluno);
+                    view.getContext().startActivity(intent);
+                }
             }
         });
     }
