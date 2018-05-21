@@ -22,7 +22,7 @@ public class Alunos_Responsavel_Activity extends AppCompatActivity {
     private static final String TAG = "Alunos_Responsavel_Activity";
     private SectionsPageAdapter_Alunos_Responsavel mSectionsPageAdapter;
     private ViewPager mViewPager;
-    public static int idResponsavel = 2;// EM TESTE. SETADO MOMENTANEAMENTE. PRECISA RECEBER DA TELA DE LOGIN
+    public static int idResponsavel = Login.idLogin;
 
 
     @SuppressLint("LongLogTag")

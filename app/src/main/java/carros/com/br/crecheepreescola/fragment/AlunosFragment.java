@@ -76,6 +76,7 @@ public class AlunosFragment extends Fragment{
                 .addConverterFactory(GsonConverterFactory.create());
 
         Retrofit retrofit = builder.build();
+
         IRetrofitCreche call = retrofit.create(IRetrofitCreche.class);
 
         Call<List<Aluno>> alunoCall = call.getAlunos(idTurma);

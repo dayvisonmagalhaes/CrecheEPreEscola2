@@ -15,6 +15,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import carros.com.br.crecheepreescola.R;
+import carros.com.br.crecheepreescola.activity.Login;
+import carros.com.br.crecheepreescola.activity.MainActivity;
 import carros.com.br.crecheepreescola.adapter.ListaTurmaAdapter;
 import carros.com.br.crecheepreescola.dominio.Turma;
 import carros.com.br.crecheepreescola.interfacce.IRetrofitCreche;
@@ -34,11 +36,8 @@ public class TurmasFragment extends Fragment{
     List<Turma> turmas;
     BaseURL baseURL = new BaseURL();
     private static String BASE_URL = "";
-    private int idProfessor = 1; //AINDA EM TESTES, POIS ESSE ID SERÁ CAPTURADO DA TELA DE LOGIN QUE AINDA NÃO FOI IMPLEMENTADA
-    //private static final String BASE_URL = "http://192.168.43.37:8080/WebServiceCreche/webresources/Creches/";
+    private int idProfessor = Login.idLogin;
     private static final String TAG = "TurmasFragment";
-
-    //private Button btnTurmasTest;
 
     RecyclerView listViewTurmas;
 

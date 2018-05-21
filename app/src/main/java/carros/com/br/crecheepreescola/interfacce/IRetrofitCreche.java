@@ -5,6 +5,7 @@ import java.util.List;
 
 import carros.com.br.crecheepreescola.dominio.Aluno;
 import carros.com.br.crecheepreescola.dominio.Diario;
+import carros.com.br.crecheepreescola.dominio.Pessoa;
 import carros.com.br.crecheepreescola.dominio.Turma;
 import retrofit2.Call;
 import retrofit2.http.Body;
@@ -29,12 +30,14 @@ public interface IRetrofitCreche {
     @GET("Alunos/listarPorResponsavel/{idResponsavel}")
     Call <List<Aluno>> getAlunosResponsavel(@Path("idResponsavel") int idResponsavel);
 
+    @GET("Pessoa/login/{email},{senha}")
+    Call<Pessoa> login(@Path("email") String email, @Path("senha") String senha);
+
+
 //    @GET("Estado/listar")
 //    Call <List<Estado>> getEstados();
 //
-//    @GET("Pessoa/login/{email},{senha}")
-//    Call<Pessoa> login(@Path("email") String email, @Path("senha") String senha);
-//
+
 //    //@GET("Pessoa/verificaLogin/{email},{senha}")
 //    //Call<Boolean> verificaLogin(@Path("email") String email, @Path("senha") String senha);
 //
