@@ -35,4 +35,3 @@ dependencies {
     implementation 'com.jakewharton:butterknife:8.5.1'
     implementation 'de.hdodenhof:circleimageview:2.2.0'
 }
-
