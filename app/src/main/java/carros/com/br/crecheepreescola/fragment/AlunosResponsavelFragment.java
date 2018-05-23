@@ -41,13 +41,10 @@ public class AlunosResponsavelFragment extends Fragment{
     List<Aluno> alunos;
     BaseURL baseURL = new BaseURL();
     private static String BASE_URL = "";
-   // private static final String BASE_URL = "http://192.168.43.37:8080/WebServiceCreche/webresources/Creches/";
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.alunos_fragment, container, false);
-
-
 
         Alunos_Responsavel_Activity alunos_responsavel_activity = new Alunos_Responsavel_Activity();
 
@@ -104,8 +101,6 @@ public class AlunosResponsavelFragment extends Fragment{
                 Log.d("Alunos" , "onResponse" + t.getMessage() );
             }
         });
-
-
 
         return view;
     }

@@ -21,10 +21,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />    <!-- LOGIN: Login -->
             </intent-filter>
         </activity>
-        <activity android:name=".activity.Diario_Comun_Calendario_Msg_Activity" /> <!--  -->
+        <activity android:name=".activity.MainActivity" /> <!--  -->
         <activity android:name=".activity.Aluno_Com_Prog_Activity" />
         <activity android:name=".activity.Turma_Calend_Activity" />
-        <activity android:name=".activity.MainActivity" />
+        <activity android:name=".activity.Diario_Comun_Calendario_Msg_Activity" />
         <activity android:name=".activity.Diario_Msg_Activity"></activity>
         <activity android:name=".activity.Alunos_Responsavel_Activity"></activity>
     </application>

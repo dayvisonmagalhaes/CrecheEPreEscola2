@@ -3,6 +3,7 @@ package carros.com.br.crecheepreescola.fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +14,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import carros.com.br.crecheepreescola.R;
+import carros.com.br.crecheepreescola.activity.Diario_Comun_Calendario_Msg_Activity;
+import carros.com.br.crecheepreescola.activity.Login;
 import carros.com.br.crecheepreescola.dominio.Diario;
 import carros.com.br.crecheepreescola.interfacce.IRetrofitCreche;
 import carros.com.br.crecheepreescola.service.BaseURL;
@@ -29,12 +32,11 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class DiarioResponsavelFragment extends Fragment{
 
     private static final String TAG = "DiarioFragment";
-    private int idAluno = 1;//precisa recuperar esse ID através da lista de alunos (tela anterior)
-    private int idResponsavel = 2;//igualmente
+    private int idAluno = Diario_Comun_Calendario_Msg_Activity.idAluno;//precisa recuperar esse ID através da lista de alunos (tela anterior)
+    private int idResponsavel = Login.idLogin;//igualmente
+
     BaseURL baseURL = new BaseURL();
     private static String BASE_URL = "";
-   // private static final String BASE_URL = "http://192.168.43.37:8080/WebServiceCreche/webresources/Creches/";
-
     private TextView tituloInicial;
     private TextView respPresenca;
     private TextView respMamadeira;
@@ -50,17 +52,13 @@ public class DiarioResponsavelFragment extends Fragment{
     private TextView respEvacuacao;
     private TextView respResumoDia;
 
-
     public DiarioResponsavelFragment() {
     }
-
-
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.diario_fragment_responsavel, container, false);
-
 
         tituloInicial = (TextView) view.findViewById(R.id.tituloInicial);
         respPresenca = (TextView) view.findViewById(R.id.respPresenca);
@@ -77,10 +75,7 @@ public class DiarioResponsavelFragment extends Fragment{
         respEvacuacao = (TextView) view.findViewById(R.id.respEvacuacao);
         respResumoDia = (TextView) view.findViewById(R.id.respResumoDia);
 
-
         consultarDiario();
-
-
 
         return view;
     }
@@ -96,6 +91,7 @@ public class DiarioResponsavelFragment extends Fragment{
         IRetrofitCreche call = retrofit.create(IRetrofitCreche.class);
 
         Call<Diario> diarioCall = call.getDiarios(idAluno,idResponsavel);
+        Log.i("IdAluno_DiarioRespo", "ID: "+ idAluno);
 
        diarioCall.enqueue(new Callback<Diario>() {
            @Override
@@ -104,6 +100,8 @@ public class DiarioResponsavelFragment extends Fragment{
                if (response.isSuccessful()){
 
                    Diario getDiario = response.body();
+
+                   Log.i("Aluno...", getDiario.getNome());
 
                    tituloInicial.setText(getDiario.getNome());
                    respPresenca.setText(getDiario.getPresenca());
@@ -130,9 +128,5 @@ public class DiarioResponsavelFragment extends Fragment{
                Toast.makeText(getActivity(), "Caiu no ERRO: " + t.getMessage(), Toast.LENGTH_LONG).show();
            }
        });
-
-
-
-
     }
 }

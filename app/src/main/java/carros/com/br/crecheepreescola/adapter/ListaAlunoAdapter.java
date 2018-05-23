@@ -22,12 +22,8 @@ import carros.com.br.crecheepreescola.activity.Diario_Comun_Calendario_Msg_Activ
 import carros.com.br.crecheepreescola.activity.Diario_Msg_Activity;
 import carros.com.br.crecheepreescola.dominio.Aluno;
 
-
-
 public class ListaAlunoAdapter extends RecyclerView.Adapter<ListaAlunoAdapter.ListaAlunoViewHolder>
          {
-
-
     private List<Aluno> alunoListItens;
     private Context context;
     private AdapterView.OnItemClickListener onItemClickListener;
@@ -67,7 +63,7 @@ public class ListaAlunoAdapter extends RecyclerView.Adapter<ListaAlunoAdapter.Li
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "ID: " + aluno.getId() + "  Nome: " + aluno.getNome(), Toast.LENGTH_SHORT).show();
-                Log.d("Alunos" , "aluno: " + "ID: " + aluno.getId() + "  Nome: " + aluno.getNome()  );
+                Log.i("Alunos_Adapter" , "aluno: " + "ID: " + aluno.getId() + "  Nome: " + aluno.getNome()  );
                 if (idResponsavel != 0){
                     Intent intent = new Intent(view.getContext(), Diario_Comun_Calendario_Msg_Activity.class);
                     intent.putExtra("alunoSelecionado", aluno);

@@ -9,19 +9,22 @@
         android:id="@+id/tituloInicial"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@android:color/holo_green_dark"
+        android:background="@color/color_Titulo_Diario_Professor"
         android:text="@string/diario_titulo_inicial"
         android:textAlignment="center"
-        android:textSize="18dp" />
+        android:textColor="@color/color_Titulo_Nome_Diario_Responsavel"
+        android:textStyle="bold"
+        android:textSize="24dp" />
 
     <TextView
         android:id="@+id/presenca"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="20dp"
-
+        android:textSize="18sp"
+        android:background="@color/color_Tit_Item_Diario_Responsavel"
         android:text="@string/diario_titulo_presenca" />
 
     <RadioGroup
@@ -35,6 +38,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:checked="false"
             android:text="Sim" />
 
@@ -43,6 +49,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:checked="true"
             android:text="Não" />
     </RadioGroup>
@@ -73,7 +82,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:background="@android:color/holo_green_light"
+                    android:textSize="18sp"
+                    android:background="@color/color_Tit_Item_Diario_Responsavel"
                     android:text="@string/diario_titulo_mamadeira" />
 
                 <RadioGroup
@@ -87,6 +97,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Não aceitou" />
 
@@ -94,6 +107,9 @@
                         android:id="@+id/radioMamadeiraMenosMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Menos da metade" />
 
@@ -101,6 +117,9 @@
                         android:id="@+id/radioMamadeiraMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Metade" />
 
@@ -108,6 +127,9 @@
                         android:id="@+id/radioMamadeiraMaisDaMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Mais da metade" />
                 </RadioGroup>
@@ -120,7 +142,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:background="@android:color/holo_green_light"
+                    android:textSize="18sp"
+                    android:background="@color/color_Tit_Item_Diario_Responsavel"
                     android:text="@string/diario_lanche_manha" />
 
                 <RadioGroup
@@ -134,6 +157,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Não aceitou" />
 
@@ -141,6 +167,9 @@
                         android:id="@+id/radioLancheMenosMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Menos da metade" />
 
@@ -148,6 +177,9 @@
                         android:id="@+id/radioLancheMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Metade" />
 
@@ -155,6 +187,9 @@
                         android:id="@+id/radioLancheMaisDaMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Mais da metade" />
 
@@ -167,7 +202,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:background="@android:color/holo_green_light"
+                    android:textSize="18sp"
+                    android:background="@color/color_Tit_Item_Diario_Responsavel"
                     android:text="@string/diario_almoco" />
 
                 <RadioGroup
@@ -181,6 +217,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Não aceitou" />
 
@@ -188,6 +227,9 @@
                         android:id="@+id/radioAlmocoMenosMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Menos da metade" />
 
@@ -195,6 +237,9 @@
                         android:id="@+id/radioAlmocoMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Metade" />
 
@@ -202,6 +247,9 @@
                         android:id="@+id/radioAlmocoMaisDaMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Mais da metade" />
 
@@ -214,7 +262,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:background="@android:color/holo_green_light"
+                    android:textSize="18sp"
+                    android:background="@color/color_Tit_Item_Diario_Responsavel"
                     android:text="@string/diario_lanche_da_tarde" />
 
                 <RadioGroup
@@ -228,6 +277,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Não aceitou" />
 
@@ -235,6 +287,9 @@
                         android:id="@+id/radioLancheTardeMenosMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Menos da metade" />
 
@@ -242,6 +297,9 @@
                         android:id="@+id/radioLancheTardeMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Metade" />
 
@@ -249,6 +307,9 @@
                         android:id="@+id/radioLancheTardeMaisDaMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Mais da metade" />
 
@@ -262,7 +323,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:background="@android:color/holo_green_light"
+                    android:textSize="18sp"
+                    android:background="@color/color_Tit_Item_Diario_Responsavel"
                     android:text="@string/diario_jantar" />
 
                 <RadioGroup
@@ -276,6 +338,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Não aceitou" />
 
@@ -283,6 +348,9 @@
                         android:id="@+id/radioJantarMenosMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Menos da metade" />
 
@@ -290,6 +358,9 @@
                         android:id="@+id/radioJantarMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Metade" />
 
@@ -297,6 +368,9 @@
                         android:id="@+id/radioJantarMaisDaMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Mais da metade" />
 
@@ -309,7 +383,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="20dp"
-                    android:background="@android:color/holo_green_light"
+                    android:textSize="18sp"
+                    android:background="@color/color_Tit_Item_Diario_Responsavel"
                     android:text="@string/diario_titulo_remedios" />
 
                 <RadioGroup
@@ -323,6 +398,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Sim" />
 
@@ -330,6 +408,9 @@
                         android:id="@+id/radioRemedioNao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:layout_marginTop="8dp"
                         android:checked="true"
                         android:text="Não" />
@@ -339,6 +420,8 @@
                     android:id="@+id/obsRemedio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp"
                     android:hint="@string/diario_titulo_obs_remedios"
                     android:visibility="invisible"/>
 
@@ -349,7 +432,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:background="@android:color/holo_green_light"
+                    android:textSize="18sp"
+                    android:background="@color/color_Tit_Item_Diario_Responsavel"
                     android:text="@string/diario_titulo_participacao" />
 
                 <RadioGroup
@@ -363,6 +447,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Não participou" />
 
@@ -370,6 +457,9 @@
                         android:id="@+id/radioParticMenosMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Pouco" />
 
@@ -377,6 +467,9 @@
                         android:id="@+id/radioParticNormal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Normal" />
 
@@ -384,6 +477,9 @@
                         android:id="@+id/radioParticExcelente"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Excelente" />
 
@@ -397,7 +493,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="20dp"
-                    android:background="@android:color/holo_green_light"
+                    android:textSize="18sp"
+                    android:background="@color/color_Tit_Item_Diario_Responsavel"
                     android:text="@string/diario_titulo_sono" />
 
                 <RadioGroup
@@ -411,6 +508,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Sim" />
 
@@ -418,6 +518,9 @@
                         android:id="@+id/radioSonoNao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:layout_marginTop="8dp"
                         android:checked="true"
                         android:text="Não" />
@@ -427,6 +530,8 @@
                     android:id="@+id/sonoTempo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp"
                     android:hint="@string/diario_sono_tempo"
                     android:visibility="invisible"/>
 
@@ -438,7 +543,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:background="@android:color/holo_green_light"
+                    android:textSize="18sp"
+                    android:background="@color/color_Tit_Item_Diario_Responsavel"
                     android:text="@string/diario_titulo_evacuacao" />
 
                 <RadioGroup
@@ -452,6 +558,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Não Evacuou" />
 
@@ -459,6 +568,9 @@
                         android:id="@+id/radioEvacPouco"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Pouco" />
 
@@ -466,6 +578,9 @@
                         android:id="@+id/radioEvacNormal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Normal" />
 
@@ -473,6 +588,9 @@
                         android:id="@+id/radioEvacMuito"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
                         android:checked="false"
                         android:text="Muito" />
 
@@ -485,7 +603,8 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:background="@android:color/holo_green_light"
+                    android:textSize="18sp"
+                    android:background="@color/color_Tit_Item_Diario_Responsavel"
                     android:text="@string/diario_titulo_resumo_dia" />
 
 
@@ -493,6 +612,8 @@
                     android:id="@+id/resumoDiaET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp"
                     android:hint="@string/diario_resumoDia_info" />
             </LinearLayout>
         </ScrollView>
@@ -503,7 +624,7 @@
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginTop="10dp"
-        android:layout_weight="3"
+        android:layout_weight="4"
         android:background="@color/colorBackgroundButton"
         android:orientation="horizontal"
         android:visibility="visible">
@@ -511,7 +632,8 @@
         <LinearLayout
             android:layout_width="0dp"
             android:layout_height="match_parent"
-            android:layout_weight="5">
+            android:layout_weight="4"
+            android:orientation="vertical">
 
             <Button
                 android:id="@+id/salvarDiario"
@@ -522,7 +644,11 @@
                 android:layout_marginTop="10dp"
                 android:background="@color/colorPrimary"
                 android:text="Salvar"
+                android:textSize="22sp"
                 android:textColor="@android:color/white" />
+
+
+
         </LinearLayout>
 
     </LinearLayout>

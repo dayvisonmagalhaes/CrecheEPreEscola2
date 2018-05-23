@@ -15,7 +15,7 @@ public class BaseURL {
 
 
 
-    private final String BASE_URL = "http://192.168.0.115:8080/WebServiceCreche/webresources/Creches/";
+    private final String BASE_URL = "http://192.168.0.105:8080/WebServiceCreche/webresources/Creches/";
 
 
     public String getBaseUrl() {

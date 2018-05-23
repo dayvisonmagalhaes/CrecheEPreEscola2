@@ -55,7 +55,6 @@ public class AlunosFragment extends Fragment{
         Aluno_Com_Prog_Activity aluno_com_prog_activity = new Aluno_Com_Prog_Activity();
         idTurma = aluno_com_prog_activity.obterIdTurma();
 
-
         Log.d("AlunosFragment" , "TurmaID: " + idTurma );
 //
         alunos = new ArrayList<>();

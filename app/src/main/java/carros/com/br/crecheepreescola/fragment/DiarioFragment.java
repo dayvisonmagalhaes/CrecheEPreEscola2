@@ -20,6 +20,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 import carros.com.br.crecheepreescola.R;
+import carros.com.br.crecheepreescola.activity.Diario_Msg_Activity;
 import carros.com.br.crecheepreescola.dominio.Diario;
 import carros.com.br.crecheepreescola.interfacce.IRetrofitCreche;
 import carros.com.br.crecheepreescola.service.BaseURL;
@@ -36,6 +37,7 @@ public class DiarioFragment extends Fragment {
 
     BaseURL baseURL = new BaseURL();
     private static String BASE_URL = "";
+    private int idAluno;
    // private static final String BASE_URL = "http://192.168.43.37:8080/WebServiceCreche/webresources/Creches/";
     Diario diario = null;//             http://localhost:8080/WebServiceCreche/webresources/Creches/Diario/inserir
     SimpleDateFormat dateFormat;
@@ -70,6 +72,7 @@ public class DiarioFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_diario_fragment, container, false);
 
 
+        idAluno = Diario_Msg_Activity.idAluno;
         btnSalvarDiario = (Button) view.findViewById(R.id.salvarDiario);
         tvTituloInicialNome = (TextView) view.findViewById(R.id.tituloInicial);
         groupPresenca = (RadioGroup) view.findViewById(R.id.groupPresenca);
@@ -151,7 +154,8 @@ public class DiarioFragment extends Fragment {
                 diario.setTempoSono(SonoTempo.getText().toString());
                 diario.setEvacuacao(onRadioGroupEvacuacao(view));
                 diario.setResumoDia(resumoDiaET.getText().toString());
-                diario.setAlunoId(1);//AINDA EM TESTES, POIS ESSE "idAluno" SERÁ CAPTURADO VIA "getIntent" DA TELA ANTERIOR (AlunosFragment)
+                //diario.setAlunoId(1);//AINDA EM TESTES, POIS ESSE "idAluno" SERÁ CAPTURADO VIA "getIntent" DA TELA ANTERIOR (AlunosFragment)
+                diario.setAlunoId(idAluno);
 
                 salvarDiario();
                // Log.i("Data", diario.getData());
@@ -387,11 +391,9 @@ public class DiarioFragment extends Fragment {
 
     public String obterDataAtual() {
 
-        dateFormat = new SimpleDateFormat("dd-MM-yyy");
-        data = new Date();
-        String dataFormatada = dateFormat.format(data);
-
-        return dataFormatada;
+        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+        return sdf.format(new Date(System.currentTimeMillis()));
+        //return dataAtual;
 
     }
 
