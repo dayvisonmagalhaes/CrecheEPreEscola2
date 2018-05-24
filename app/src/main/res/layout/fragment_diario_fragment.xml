@@ -10,11 +10,12 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@color/color_Titulo_Diario_Professor"
+        android:layout_marginTop="16sp"
         android:text="@string/diario_titulo_inicial"
         android:textAlignment="center"
         android:textColor="@color/color_Titulo_Nome_Diario_Responsavel"
-        android:textStyle="bold"
-        android:textSize="24dp" />
+        android:textSize="24dp"
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/presenca"
@@ -23,9 +24,9 @@
         android:layout_marginLeft="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginTop="20dp"
-        android:textSize="18sp"
         android:background="@color/color_Tit_Item_Diario_Responsavel"
-        android:text="@string/diario_titulo_presenca" />
+        android:text="@string/diario_titulo_presenca"
+        android:textSize="18sp" />
 
     <RadioGroup
         android:id="@+id/groupPresenca"
@@ -38,30 +39,30 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:checked="false"
+            android:text="Sim"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:checked="false"
-            android:text="Sim" />
+            android:textStyle="bold" />
 
         <RadioButton
             android:id="@+id/radioNao"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="8dp"
+            android:checked="true"
+            android:text="Não"
             android:textColor="@color/colorPrimaryDark"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:checked="true"
-            android:text="Não" />
+            android:textStyle="bold" />
     </RadioGroup>
 
     <LinearLayout
         android:id="@+id/linearLayoutDiario"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="8"
         android:layout_marginTop="20dp"
+        android:layout_weight="6"
         android:orientation="vertical"
         android:visibility="invisible">
 
@@ -82,9 +83,9 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:textSize="18sp"
                     android:background="@color/color_Tit_Item_Diario_Responsavel"
-                    android:text="@string/diario_titulo_mamadeira" />
+                    android:text="@string/diario_titulo_mamadeira"
+                    android:textSize="18sp" />
 
                 <RadioGroup
                     android:id="@+id/groupMamadeira"
@@ -97,41 +98,41 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:checked="false"
+                        android:text="Não aceitou"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Não aceitou" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioMamadeiraMenosMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Menos da metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Menos da metade" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioMamadeiraMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Metade" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioMamadeiraMaisDaMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Mais da metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Mais da metade" />
+                        android:textStyle="bold" />
                 </RadioGroup>
 
                 <TextView
@@ -142,9 +143,9 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:textSize="18sp"
                     android:background="@color/color_Tit_Item_Diario_Responsavel"
-                    android:text="@string/diario_lanche_manha" />
+                    android:text="@string/diario_lanche_manha"
+                    android:textSize="18sp" />
 
                 <RadioGroup
                     android:id="@+id/groupLancheManha"
@@ -157,41 +158,41 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:checked="false"
+                        android:text="Não aceitou"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Não aceitou" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioLancheMenosMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Menos da metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Menos da metade" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioLancheMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Metade" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioLancheMaisDaMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Mais da metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Mais da metade" />
+                        android:textStyle="bold" />
 
                 </RadioGroup>
 
@@ -202,9 +203,9 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:textSize="18sp"
                     android:background="@color/color_Tit_Item_Diario_Responsavel"
-                    android:text="@string/diario_almoco" />
+                    android:text="@string/diario_almoco"
+                    android:textSize="18sp" />
 
                 <RadioGroup
                     android:id="@+id/groupAlmoco"
@@ -217,41 +218,41 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:checked="false"
+                        android:text="Não aceitou"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Não aceitou" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioAlmocoMenosMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Menos da metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Menos da metade" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioAlmocoMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Metade" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioAlmocoMaisDaMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Mais da metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Mais da metade" />
+                        android:textStyle="bold" />
 
                 </RadioGroup>
 
@@ -262,9 +263,9 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:textSize="18sp"
                     android:background="@color/color_Tit_Item_Diario_Responsavel"
-                    android:text="@string/diario_lanche_da_tarde" />
+                    android:text="@string/diario_lanche_da_tarde"
+                    android:textSize="18sp" />
 
                 <RadioGroup
                     android:id="@+id/groupLancheTarde"
@@ -277,41 +278,41 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:checked="false"
+                        android:text="Não aceitou"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Não aceitou" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioLancheTardeMenosMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Menos da metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Menos da metade" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioLancheTardeMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Metade" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioLancheTardeMaisDaMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Mais da metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Mais da metade" />
+                        android:textStyle="bold" />
 
                 </RadioGroup>
 
@@ -323,9 +324,9 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:textSize="18sp"
                     android:background="@color/color_Tit_Item_Diario_Responsavel"
-                    android:text="@string/diario_jantar" />
+                    android:text="@string/diario_jantar"
+                    android:textSize="18sp" />
 
                 <RadioGroup
                     android:id="@+id/groupJantar"
@@ -338,41 +339,41 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:checked="false"
+                        android:text="Não aceitou"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Não aceitou" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioJantarMenosMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Menos da metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Menos da metade" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioJantarMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Metade" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioJantarMaisDaMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Mais da metade"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Mais da metade" />
+                        android:textStyle="bold" />
 
                 </RadioGroup>
 
@@ -383,9 +384,9 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="20dp"
-                    android:textSize="18sp"
                     android:background="@color/color_Tit_Item_Diario_Responsavel"
-                    android:text="@string/diario_titulo_remedios" />
+                    android:text="@string/diario_titulo_remedios"
+                    android:textSize="18sp" />
 
                 <RadioGroup
                     android:id="@+id/groupRemedio"
@@ -398,32 +399,32 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:checked="false"
+                        android:text="Sim"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Sim" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioRemedioNao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
                         android:layout_marginTop="8dp"
                         android:checked="true"
-                        android:text="Não" />
+                        android:text="Não"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
                 </RadioGroup>
 
                 <EditText
                     android:id="@+id/obsRemedio"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="@string/diario_titulo_obs_remedios"
                     android:textColor="@android:color/holo_red_dark"
                     android:textSize="18sp"
-                    android:hint="@string/diario_titulo_obs_remedios"
-                    android:visibility="invisible"/>
+                    android:visibility="invisible" />
 
                 <TextView
                     android:id="@+id/participacao"
@@ -432,9 +433,9 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:textSize="18sp"
                     android:background="@color/color_Tit_Item_Diario_Responsavel"
-                    android:text="@string/diario_titulo_participacao" />
+                    android:text="@string/diario_titulo_participacao"
+                    android:textSize="18sp" />
 
                 <RadioGroup
                     android:id="@+id/groupParticipacao"
@@ -447,41 +448,41 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:checked="false"
+                        android:text="Não participou"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Não participou" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioParticMenosMetade"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Pouco"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Pouco" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioParticNormal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Normal"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Normal" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioParticExcelente"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Excelente"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Excelente" />
+                        android:textStyle="bold" />
 
                 </RadioGroup>
 
@@ -493,9 +494,9 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="20dp"
-                    android:textSize="18sp"
                     android:background="@color/color_Tit_Item_Diario_Responsavel"
-                    android:text="@string/diario_titulo_sono" />
+                    android:text="@string/diario_titulo_sono"
+                    android:textSize="18sp" />
 
                 <RadioGroup
                     android:id="@+id/groupSono"
@@ -508,32 +509,32 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:checked="false"
+                        android:text="Sim"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Sim" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioSonoNao"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textColor="@color/colorPrimaryDark"
-                        android:textSize="18sp"
-                        android:textStyle="bold"
                         android:layout_marginTop="8dp"
                         android:checked="true"
-                        android:text="Não" />
+                        android:text="Não"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
                 </RadioGroup>
 
                 <EditText
                     android:id="@+id/sonoTempo"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="@string/diario_sono_tempo"
                     android:textColor="@android:color/holo_red_dark"
                     android:textSize="18sp"
-                    android:hint="@string/diario_sono_tempo"
-                    android:visibility="invisible"/>
+                    android:visibility="invisible" />
 
                 <TextView
                     android:id="@+id/evacuacao"
@@ -543,9 +544,9 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:textSize="18sp"
                     android:background="@color/color_Tit_Item_Diario_Responsavel"
-                    android:text="@string/diario_titulo_evacuacao" />
+                    android:text="@string/diario_titulo_evacuacao"
+                    android:textSize="18sp" />
 
                 <RadioGroup
                     android:id="@+id/groupEvacuacao"
@@ -558,41 +559,41 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="8dp"
+                        android:checked="false"
+                        android:text="Não Evacuou"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Não Evacuou" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioEvacPouco"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Pouco"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Pouco" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioEvacNormal"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Normal"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Normal" />
+                        android:textStyle="bold" />
 
                     <RadioButton
                         android:id="@+id/radioEvacMuito"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Muito"
                         android:textColor="@color/colorPrimaryDark"
                         android:textSize="18sp"
-                        android:textStyle="bold"
-                        android:checked="false"
-                        android:text="Muito" />
+                        android:textStyle="bold" />
 
                 </RadioGroup>
 
@@ -603,18 +604,18 @@
                     android:layout_marginLeft="8dp"
                     android:layout_marginRight="8dp"
                     android:layout_marginTop="10dp"
-                    android:textSize="18sp"
                     android:background="@color/color_Tit_Item_Diario_Responsavel"
-                    android:text="@string/diario_titulo_resumo_dia" />
+                    android:text="@string/diario_titulo_resumo_dia"
+                    android:textSize="18sp" />
 
 
                 <EditText
                     android:id="@+id/resumoDiaET"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:hint="@string/diario_resumoDia_info"
                     android:textColor="@android:color/holo_red_dark"
-                    android:textSize="18sp"
-                    android:hint="@string/diario_resumoDia_info" />
+                    android:textSize="18sp" />
             </LinearLayout>
         </ScrollView>
     </LinearLayout>
@@ -623,33 +624,23 @@
         android:id="@+id/linearLayoutBtnSalvar"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_marginTop="10dp"
         android:layout_weight="4"
-        android:background="@color/colorBackgroundButton"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="10dp"
         android:orientation="horizontal"
         android:visibility="visible">
 
-        <LinearLayout
-            android:layout_width="0dp"
-            android:layout_height="match_parent"
-            android:layout_weight="4"
-            android:orientation="vertical">
-
-            <Button
-                android:id="@+id/salvarDiario"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="20dp"
-                android:layout_marginRight="20dp"
-                android:layout_marginTop="10dp"
-                android:background="@color/colorPrimary"
-                android:text="Salvar"
-                android:textSize="22sp"
-                android:textColor="@android:color/white" />
-
-
-
-        </LinearLayout>
-
+        <Button
+            android:id="@+id/salvarDiario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:background="@color/color_Titulo_Nome_Diario_Responsavel"
+            android:text="Salvar"
+            android:textColor="@android:color/white"
+            android:textSize="22sp" />
     </LinearLayout>
 </LinearLayout>

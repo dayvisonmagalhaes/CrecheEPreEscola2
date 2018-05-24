@@ -4,11 +4,12 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorBackgroundButton">#e6edd9</color>
-    <color name="colorItem">#eaeaea</color>
+    <color name="colorItem">#ffffff</color>
     <color name="color_Titulo_Diario_Responsavel">#eaeaea</color>
-    <color name="color_Titulo_Nome_Diario_Responsavel">#44845f</color>
+    <color name="color_Titulo_Nome_Diario_Responsavel">#26b462</color>
     <color name="color_Titulo_Diario_Professor">#cee1e9</color>
     <color name="color_Tit_Item_Diario_Responsavel">#cfdbe6</color>
     <color name="color_Resposta_Diario_Responsavel">#f7f7f7</color>
-    <color name="color_list_item_turma">#dedddd</color>
+    <color name="color_list_item_turma">#f1f1f1</color>
+    <color name="color_botao_voltar_diario_respons">#dedddd</color>
 </resources>

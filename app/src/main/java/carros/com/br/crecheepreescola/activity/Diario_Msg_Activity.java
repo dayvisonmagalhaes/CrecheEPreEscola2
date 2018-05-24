@@ -19,6 +19,7 @@ public class Diario_Msg_Activity extends AppCompatActivity {
     private SectionsPageAdapter_Diario_Msg mSectionsPageAdapter;
     private ViewPager mViewPager;
     public static int idAluno;
+    public static String nomeAluno;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,7 @@ public class Diario_Msg_Activity extends AppCompatActivity {
 
         Aluno aluno = intent.getParcelableExtra("alunoSelecionado");
         idAluno = aluno.getId();
+        nomeAluno = aluno.getNome();
         Log.i("idAluno_Diario_MsgActi:",  "ID: " + idAluno);
 
         Log.d(TAG, "onCreate: Starting.");
@@ -46,7 +48,7 @@ public class Diario_Msg_Activity extends AppCompatActivity {
 
         SectionsPageAdapter_Diario_Msg adapter = new SectionsPageAdapter_Diario_Msg(getSupportFragmentManager());
         adapter.addFragment(new DiarioFragment(), "DIÁRIO");
-        adapter.addFragment(new MsgFragment(), "MENSAGEM");
+        //adapter.addFragment(new MsgFragment(), "MENSAGEM");
         viewPager.setAdapter(adapter);
     }
 }

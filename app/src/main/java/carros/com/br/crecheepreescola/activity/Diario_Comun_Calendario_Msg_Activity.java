@@ -26,6 +26,7 @@ public class Diario_Comun_Calendario_Msg_Activity extends AppCompatActivity {
     private SectionsPageAdapter_Diario_Comun_Calendario_Msg mSectionsPageAdapter;
     private ViewPager mViewPager;
     public static int idAluno;
+    public static String nomeAluno;
 
     @SuppressLint("LongLogTag")
     @Override
@@ -38,6 +39,7 @@ public class Diario_Comun_Calendario_Msg_Activity extends AppCompatActivity {
 
         Aluno aluno = intent.getParcelableExtra("alunoSelecionado");
         idAluno = aluno.getId();
+        nomeAluno = aluno.getNome();
         Log.i("idAluno_Diario_Comun_...:",  "ID: " + idAluno);
 
         Log.d(TAG, "onCreate: Starting.");
@@ -54,9 +56,9 @@ public class Diario_Comun_Calendario_Msg_Activity extends AppCompatActivity {
 
         SectionsPageAdapter_Diario_Comun_Calendario_Msg adapter = new SectionsPageAdapter_Diario_Comun_Calendario_Msg(getSupportFragmentManager());
         adapter.addFragment(new DiarioResponsavelFragment(), "DIÁRIO");
-        adapter.addFragment(new ComunicadoFragment(), "COMUNICADOS");
-        adapter.addFragment(new CalendarioFragment(), "CALENDÁRIO");
-        adapter.addFragment(new MsgFragment(), "MENSAGEMS");
+//        adapter.addFragment(new ComunicadoFragment(), "COMUNICADOS");
+//        adapter.addFragment(new CalendarioFragment(), "CALENDÁRIO");
+//        adapter.addFragment(new MsgFragment(), "MENSAGEMS");
         viewPager.setAdapter(adapter);
     }
 }

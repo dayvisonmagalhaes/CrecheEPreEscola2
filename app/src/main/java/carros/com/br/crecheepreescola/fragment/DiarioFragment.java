@@ -17,7 +17,9 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
+import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 import carros.com.br.crecheepreescola.R;
 import carros.com.br.crecheepreescola.activity.Diario_Msg_Activity;
@@ -38,6 +40,7 @@ public class DiarioFragment extends Fragment {
     BaseURL baseURL = new BaseURL();
     private static String BASE_URL = "";
     private int idAluno;
+    private String nomeAluno;
    // private static final String BASE_URL = "http://192.168.43.37:8080/WebServiceCreche/webresources/Creches/";
     Diario diario = null;//             http://localhost:8080/WebServiceCreche/webresources/Creches/Diario/inserir
     SimpleDateFormat dateFormat;
@@ -72,6 +75,7 @@ public class DiarioFragment extends Fragment {
         View view = inflater.inflate(R.layout.fragment_diario_fragment, container, false);
 
 
+        nomeAluno = Diario_Msg_Activity.nomeAluno;
         idAluno = Diario_Msg_Activity.idAluno;
         btnSalvarDiario = (Button) view.findViewById(R.id.salvarDiario);
         tvTituloInicialNome = (TextView) view.findViewById(R.id.tituloInicial);
@@ -90,6 +94,8 @@ public class DiarioFragment extends Fragment {
         resumoDiaET = (EditText) view.findViewById(R.id.resumoDiaET);
         linearLayoutDiario = (LinearLayout) view.findViewById(R.id.linearLayoutDiario);
         linearLayoutBtnSalvar = (LinearLayout) view.findViewById(R.id.linearLayoutBtnSalvar);
+
+        tvTituloInicialNome.setText(nomeAluno);
 
         groupPresenca.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
             @Override
@@ -139,6 +145,7 @@ public class DiarioFragment extends Fragment {
             @Override
             public void onClick(View view) {
 
+
                 diario = new Diario();
                 diario.setPresenca(onRadioGroupPresenca(view));
                 diario.setMamadeira(onRadioGroupMamadeira(view));
@@ -154,7 +161,6 @@ public class DiarioFragment extends Fragment {
                 diario.setTempoSono(SonoTempo.getText().toString());
                 diario.setEvacuacao(onRadioGroupEvacuacao(view));
                 diario.setResumoDia(resumoDiaET.getText().toString());
-                //diario.setAlunoId(1);//AINDA EM TESTES, POIS ESSE "idAluno" SERÁ CAPTURADO VIA "getIntent" DA TELA ANTERIOR (AlunosFragment)
                 diario.setAlunoId(idAluno);
 
                 salvarDiario();
@@ -391,9 +397,18 @@ public class DiarioFragment extends Fragment {
 
     public String obterDataAtual() {
 
-        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
-        return sdf.format(new Date(System.currentTimeMillis()));
-        //return dataAtual;
+//        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
+//        //return sdf.format(new Date(System.currentTimeMillis()));
+//        Calendar hoje = Calendar.getInstance();
+//        return sdf.format(hoje);
+//        //return dataAtual;
+////        Log.i("Alunos_Adapter" , "aluno: " + "ID: " + aluno.getId() + "  Nome: " + aluno.getNome()  );
+
+        Date dataHoraAtual = new Date();
+        String data = new SimpleDateFormat("dd/MM/yyyy").format(dataHoraAtual);
+        String hora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
+        Log.i("Data: ",  data + "Hora: " + hora);
+        return data;
 
     }
 
