@@ -100,6 +100,8 @@ public class Login extends AppCompatActivity {
 
                                 startActivity(intent);
 
+                                Log.i("Login","Teste de login");
+
                             } else if (pessoaLogin.getTipoPessoa() == 2){
 
                                 intent = new Intent(Login.this, Alunos_Responsavel_Activity.class);
@@ -108,6 +110,7 @@ public class Login extends AppCompatActivity {
                                 idLogin = pessoaLogin.getId();
 
                                 startActivity(intent);
+                                Log.i("Login","Teste de login");
                             }
 
 

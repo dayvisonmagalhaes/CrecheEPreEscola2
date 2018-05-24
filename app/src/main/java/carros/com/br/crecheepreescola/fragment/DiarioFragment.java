@@ -398,17 +398,18 @@ public class DiarioFragment extends Fragment {
     public String obterDataAtual() {
 
 //        SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy HH:mm:ss");
-//        //return sdf.format(new Date(System.currentTimeMillis()));
+//        return sdf.format(new Date(System.currentTimeMillis()));
 //        Calendar hoje = Calendar.getInstance();
 //        return sdf.format(hoje);
-//        //return dataAtual;
-////        Log.i("Alunos_Adapter" , "aluno: " + "ID: " + aluno.getId() + "  Nome: " + aluno.getNome()  );
+//        return dataAtual;
+//        Log.i("Alunos_Adapter" , "aluno: " + "ID: " + aluno.getId() + "  Nome: " + aluno.getNome()  );
 
         Date dataHoraAtual = new Date();
-        String data = new SimpleDateFormat("dd/MM/yyyy").format(dataHoraAtual);
+        String data = new SimpleDateFormat("dd-MM-yyyy").format(dataHoraAtual);
         String hora = new SimpleDateFormat("HH:mm:ss").format(dataHoraAtual);
-        Log.i("Data: ",  data + "Hora: " + hora);
+        Log.i("Data-hora: ",  data + "Hora: " + hora);
         return data;
+
 
     }
 
