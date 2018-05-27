@@ -85,11 +85,9 @@ public class Login extends AppCompatActivity {
                                 Toast.makeText(getApplicationContext(), "Login ou email com erro", Toast.LENGTH_LONG).show();
 
                                 //TESTA PARA VER O TIPO DE PESSOA:
-                                // 1 Administrador,
-                                // 2 Professor,
-                                // 3 Aluno,
-                                // 4 Funcionário,
-                                // 5 Responsável
+                                // 1 Professor,
+                                // 2 Responsável
+
                             } else if (pessoaLogin.getTipoPessoa() == 1) {
 
                                 intent = new Intent(Login.this, MainActivity.class);

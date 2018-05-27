@@ -47,7 +47,7 @@ public class Diario_Msg_Activity extends AppCompatActivity {
     private void setupViewPager (ViewPager viewPager){
 
         SectionsPageAdapter_Diario_Msg adapter = new SectionsPageAdapter_Diario_Msg(getSupportFragmentManager());
-        adapter.addFragment(new DiarioFragment(), "DIÁRIO");
+        adapter.addFragment(new DiarioFragment(), "DIÁRIO - PROFESSOR");
         //adapter.addFragment(new MsgFragment(), "MENSAGEM");
         viewPager.setAdapter(adapter);
     }

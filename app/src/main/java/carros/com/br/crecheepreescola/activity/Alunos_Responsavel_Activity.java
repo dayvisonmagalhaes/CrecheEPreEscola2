@@ -33,7 +33,6 @@ public class Alunos_Responsavel_Activity extends AppCompatActivity {
 
         Intent intent = getIntent();
         Pessoa pessoa = intent.getParcelableExtra("pessoaId");
-        //idResponsavel = pessoa.getId(); // DESCOMENTAR ASSIM QUE RECEBER DA TELA DE LOGIN.
 
         Log.d(TAG, "onCreate: Starting.");
         mSectionsPageAdapter = new SectionsPageAdapter_Alunos_Responsavel(getSupportFragmentManager());

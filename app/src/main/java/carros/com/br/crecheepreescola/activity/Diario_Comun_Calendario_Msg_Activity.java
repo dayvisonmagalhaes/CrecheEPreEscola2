@@ -55,7 +55,7 @@ public class Diario_Comun_Calendario_Msg_Activity extends AppCompatActivity {
     private void setupViewPager (ViewPager viewPager){
 
         SectionsPageAdapter_Diario_Comun_Calendario_Msg adapter = new SectionsPageAdapter_Diario_Comun_Calendario_Msg(getSupportFragmentManager());
-        adapter.addFragment(new DiarioResponsavelFragment(), "DIÁRIO");
+        adapter.addFragment(new DiarioResponsavelFragment(), "DIÁRIO - RESPONSÁVEL");
 //        adapter.addFragment(new ComunicadoFragment(), "COMUNICADOS");
 //        adapter.addFragment(new CalendarioFragment(), "CALENDÁRIO");
 //        adapter.addFragment(new MsgFragment(), "MENSAGEMS");

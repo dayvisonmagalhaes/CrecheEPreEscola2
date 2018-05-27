@@ -34,8 +34,6 @@ import retrofit2.converter.gson.GsonConverterFactory;
 public class AlunosResponsavelFragment extends Fragment{
 
     private static final String TAG = "AlunosFragment";
-    private Button btnAlunoProfessor;
-    private Button btnAlunoResponsavel;
     private int idResponsavel;
     RecyclerView listViewAlunos;
     List<Aluno> alunos;
@@ -81,12 +79,7 @@ public class AlunosResponsavelFragment extends Fragment{
                 int statusCode = response.code();
 
                 List<Aluno> alunosList = response.body();
-//                if (alunosList != null){
-//                    for (Aluno aluno : alunosList){
-//                        alunos.add(aluno);
-//                        Log.d("Alunos" , "onResponse: " + aluno.getNome() );
-//                    }
-//                }
+//
                 //Log.d("Alunos" , "onResponse" + statusCode );
                 Log.d("CodTurma" ,"ID: " + idResponsavel );
 

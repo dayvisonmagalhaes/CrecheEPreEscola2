@@ -65,11 +65,11 @@ public class ListaAlunoAdapter extends RecyclerView.Adapter<ListaAlunoAdapter.Li
                 Toast.makeText(context, "ID: " + aluno.getId() + "  Nome: " + aluno.getNome(), Toast.LENGTH_SHORT).show();
                 Log.i("Alunos_Adapter" , "aluno: " + "ID: " + aluno.getId() + "  Nome: " + aluno.getNome()  );
                 if (idResponsavel != 0){
-                    Intent intent = new Intent(view.getContext(), Diario_Comun_Calendario_Msg_Activity.class);
+                    Intent intent = new Intent(view.getContext(), Diario_Comun_Calendario_Msg_Activity.class);//Activity do responsável
                     intent.putExtra("alunoSelecionado", aluno);
                     view.getContext().startActivity(intent);
                 }else {
-                    Intent intent = new Intent(view.getContext(), Diario_Msg_Activity.class);
+                    Intent intent = new Intent(view.getContext(), Diario_Msg_Activity.class);//Activity do Professor
                     intent.putExtra("alunoSelecionado", aluno);
                     view.getContext().startActivity(intent);
                 }

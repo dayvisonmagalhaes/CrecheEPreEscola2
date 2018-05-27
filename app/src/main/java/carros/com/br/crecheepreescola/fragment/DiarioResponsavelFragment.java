@@ -28,12 +28,10 @@ import retrofit2.converter.gson.GsonConverterFactory;
 /**
  * Created by Dayvison_Not on 19/03/2018.
  */
-
 public class DiarioResponsavelFragment extends Fragment{
-
     private static final String TAG = "DiarioFragment";
-    private int idAluno = Diario_Comun_Calendario_Msg_Activity.idAluno;//precisa recuperar esse ID através da lista de alunos (tela anterior)
-    private int idResponsavel = Login.idLogin;//igualmente
+    private int idAluno = Diario_Comun_Calendario_Msg_Activity.idAluno;
+    private int idResponsavel = Login.idLogin;
 
     BaseURL baseURL = new BaseURL();
     private static String BASE_URL = "";
@@ -54,12 +52,10 @@ public class DiarioResponsavelFragment extends Fragment{
 
     public DiarioResponsavelFragment() {
     }
-
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.diario_fragment_responsavel, container, false);
-
         tituloInicial = (TextView) view.findViewById(R.id.tituloInicial);
         respPresenca = (TextView) view.findViewById(R.id.respPresenca);
         respMamadeira = (TextView) view.findViewById(R.id.respMamadeira);
@@ -74,14 +70,16 @@ public class DiarioResponsavelFragment extends Fragment{
         respTempoSono = (TextView) view.findViewById(R.id.respTempoSono);
         respEvacuacao = (TextView) view.findViewById(R.id.respEvacuacao);
         respResumoDia = (TextView) view.findViewById(R.id.respResumoDia);
-
-        consultarDiario();
-
         return view;
     }
 
-    private void consultarDiario() {
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+        consultarDiario();
+    }
 
+    private void consultarDiario() {
         BASE_URL = baseURL.getBaseUrl();
         Retrofit.Builder builder = new Retrofit.Builder()
                 .baseUrl(BASE_URL)
@@ -89,20 +87,13 @@ public class DiarioResponsavelFragment extends Fragment{
 
         Retrofit retrofit = builder.build();
         IRetrofitCreche call = retrofit.create(IRetrofitCreche.class);
-
         Call<Diario> diarioCall = call.getDiarios(idAluno,idResponsavel);
-        Log.i("IdAluno_DiarioRespo", "ID: "+ idAluno);
 
-       diarioCall.enqueue(new Callback<Diario>() {
+        diarioCall.enqueue(new Callback<Diario>() {
            @Override
            public void onResponse(Call<Diario> call, Response<Diario> response) {
-
                if (response.isSuccessful()){
-
                    Diario getDiario = response.body();
-
-                   Log.i("Aluno...", getDiario.getNome());
-
                    tituloInicial.setText(getDiario.getNome());
                    respPresenca.setText(getDiario.getPresenca());
                    respMamadeira.setText(getDiario.getMamadeira());
@@ -121,10 +112,8 @@ public class DiarioResponsavelFragment extends Fragment{
                    Toast.makeText(getActivity(), "Diário de: " + getDiario.getNome() + " recuperado com sucesso!", Toast.LENGTH_LONG).show();
                }
            }
-
            @Override
            public void onFailure(Call<Diario> call, Throwable t) {
-
                Toast.makeText(getActivity(), "Caiu no ERRO: " + t.getMessage(), Toast.LENGTH_LONG).show();
            }
        });
